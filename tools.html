@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+    <link href=/style.css rel=stylesheet type="text/css" media=all>
+    <!--<script src=fav.js></script>-->
+  </head>
+<body>
+<div class=contentdiv>
+<textarea id=palette_colors oninput="update()" placeholder="hexcodes go here :)"></textarea>
+<canvas id=palette width=128 height=64 style=background-color:var(--accent)>
+</canvas>
+<script>
+var c=document.getElementById("palette");
+function update(){
+var p=[];
+var e="";
+var t=document.getElementById("palette_colors").value;
+for(i=0;i<t.length;i++){
+if (t.charAt(i)==","){
+p[p.length]=e;
+e="";
+}else{
+e+=t.charAt(i);
+}
+c.width=p.length%9*16;c.height=(Math.floor(p.length/9+1))*16;
+var ctx=c.getContext("2d");
+}
+for(v=0;v<p.length;v++){ 
+ctx.fillStyle="#"+p[v];
+ctx.fillRect(v%9*16,Math.floor(v/9)*16,16,16);
+}
+}
+</script>
+</div>
+</body>
+</html>
