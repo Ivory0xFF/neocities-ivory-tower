@@ -33,7 +33,7 @@ button:active{background-color:var(--scol);color:var(--pcol)}
 .close{position:absolute;top:16px;right:64px;color:var(--pcol);font-size:5em;cursor:pointer}
 .back{font-size:1.25em;display:block;margin:auto}
 .palette{display:flex;overflow:hidden}
-.color{width:4em;height:4em;border-radius:0;cursor:pointer}
+.color{width:4em;height:4em;border-radius:0;cursor:pointer;text-align:center}
 ::-webkit-scrollbar{width:2vmin}
 ::-webkit-scrollbar-thumb{background:var(--scol);border-radius:1px}
 ::-webkit-scrollbar-thumb:hover{background:var(--scol)}
