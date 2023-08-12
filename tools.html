@@ -12,37 +12,9 @@
 <body>
 <div class=basediv>
 <div class=contentdiv>
-<textarea id=palette_colors oninput="update()" placeholder="hexcodes go here :)"></textarea>
-<canvas id=palette width=128 height=64 style=background-color:var(--accent)>
-</canvas>
-<script>
-var c = document.getElementById("palette");
-function update() {
-    var p = [];
-    var e = "";
-    var t = document
-        .getElementById("palette_colors")
-        .value;
-    for (i = 0; i < t.length; i++) {
-        if (t.charAt(i) == ",") {
-            p[p.length] = e;
-            e = "";
-        } else {
-            e += t.charAt(i);
-        }
-        c.width = p.length % 9 * 16;
-        c.height = (Math.floor(p.length / 9 + 1)) * 16;
-        var ctx = c.getContext("2d");
-    }
-    for (v = 0; v < p.length; v++) {
-        ctx.fillStyle = "#" + p[v];
-        ctx.fillRect(v % 9 * 16, Math.floor(v / 9) * 16, 16, 16);
-    }
-}
-</script>
 <div class=griddiv>
-<canvas class=palette alt=36001f;45122c;59003a;6c1747;ae4774;ff9e9e;ffd6d6></canvas>
-<canvas class=palette alt=202934;283c45;315f66;3b8f7d;3aba8e></canvas>
-<canvas class=palette alt=FFFFFF;000000></canvas>
+<div class=palette alt=36001f;45122c;59003a;6c1747;ae4774;ff9e9e;ffd6d6></div>
+<div class=palette alt=202934;283c45;315f66;3b8f7d;3aba8e></div>
+<div class=palette alt=FFFFFF;000000></div>
 </div>
 </div></div></body></html>

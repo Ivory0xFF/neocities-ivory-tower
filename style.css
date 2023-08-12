@@ -18,8 +18,8 @@ button:hover{outline:var(--accent)solid 5px}
 button:active{background-color:var(--scol);color:var(--pcol)}
 .center{display:block;margin:auto}
 .basediv{background-color:#00000000;margin:auto;margin:auto;margin-bottom:2em;margin-top:2em}
-@media (orientation: portrait){.basediv{width:95%}}
-@media (orientation: landscape){.basediv{width:70vmax}}
+@media(orientation:portrait){.basediv{width:95%}}
+@media(orientation:landscape){.basediv{width:70vmax}}
 .contentdiv{background-color:var(--tcol);background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop-filter:blur(5px);padding:9px}
 .griddiv,.showcase{display:flex;flex-direction:row;align-items:center;align-content:flex-start;justify-content:space-evenly;flex-wrap:wrap;gap:2em 2em}
 .showcase{background-color:var(--tcol)}
@@ -29,9 +29,11 @@ button:active{background-color:var(--scol);color:var(--pcol)}
 .showcase img:active{outline-offset:.5em}
 .modal{margin:auto;display:none;z-index:1;height:100%;width:100%;position:fixed;top:0;background-color:#00000080;overflow:auto}
 .caption{font-size:2em;text-align:center;backdrop-filter:blur(5px);color:var(--pcol)}
-.img0{width:100%;height:auto;display:block;margin:auto;margin-top:2em;border:#000000 none}
+.img0{width:100%;height:auto;display:block;margin:auto;margin-top:5%;border:#000000 none}
 .close{position:absolute;top:16px;right:64px;color:var(--pcol);font-size:5em;cursor:pointer}
 .back{font-size:1.25em;display:block;margin:auto}
+.palette{display:flex;overflow:hidden}
+.color{width:4em;height:4em;border-radius:0;cursor:pointer}
 ::-webkit-scrollbar{width:2vmin}
 ::-webkit-scrollbar-thumb{background:var(--scol);border-radius:1px}
 ::-webkit-scrollbar-thumb:hover{background:var(--scol)}
