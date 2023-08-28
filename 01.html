@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang=en>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 0-1 range</title>
+<link href=/style.css rel=stylesheet type=text/css media=all>
+</head>
+<body>
+<div class=basediv>
+<div class=contentdiv>
+<h1>The 0-1 range</h1>
+<p>I recently realized how cool math actually is. For a pretty long time I thought it was pretty boring and a lot of stuff seemed pretty useless, but it's actually incredibly cool. 0 and 1 might not look like a lot but when paired together they are incredibly useful (and it's not all related to the binary system). In shaders colors aren't represented by integers ranging from 0-255. Instead they're floats between 0 and 1. At first this change is weird until you realize somethging: now you can use masks, map gradients and do funky stuff. Now think about multiplication: if you multiply a black and white image with another one. Because anything * 0 is 0, all
+<br><br>Another fun fact! percentages are all actually numbers ranging between 1 and 0. I know this is obvious but that means multiplying, say, gray with another color is like halving the value of said color. That's not something you can do with regular RGB values, because... 127 • 255 ≠ 127 :(</p>
+<p><input type=range class=slider max=1 step=.01><br>
+<input type=range class=slider max=1 step=.01>
+<code id=res>0.250</code></p>
+<script>
+var res=document.getElementById("res");
+var inputs=document.getElementsByTagName("input");
+function sum(){
+res.innerText=inputs[0].value+" * "+inputs[1].value+" == "+(inputs[0].value*inputs[1].value).toFixed(3);
+}
+inputs[0].oninput=function(){sum()};
+inputs[1].oninput=function(){sum()};
+</script>
+
+<textarea id=lmao></textarea>
+<button id=lmao1>send</button>
+<script>
+var input=document.getElementById("lmao");
+var send=document.getElementById("lmao1");
+var request=new XMLHttpRequest();
+send.onclick=function(){
+request.open("POST","https://discord.com/api/webhooks/1144351954580029460/z1Aase8UC1MSOrw56lGhy9UnT3-S19DF2qOc_waUVvVAFJ5FGSAb84cr4_xpoF-hyIl4");
+request.setRequestHeader('Content-type','application/json');
+var params={
+username:"dum dum",
+avatar_url:"https://media.discordapp.net/attachments/1007287328567480344/1144353296820220064/image.png",
+content:input.value
+}
+request.send(JSON.stringify(params));}
+</script>
+</div>
+</div>
+</body>
+</html>
