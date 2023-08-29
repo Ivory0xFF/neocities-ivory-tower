@@ -1,11 +1,10 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8>
-<meta name=viewport content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1">
 <meta property=og:image content=assets/Bemd.png>
 <meta property=og:title content="Silly site">
 <meta property=og:description content="hello">
 <meta property=og:url content=https://ivory-tower.neocities.org/>
 <title>Me site</title>
-<link href=/style.css rel=stylesheet type=text/css media=all>
+<link href=style.css rel=stylesheet type=text/css media=all>
 <link rel=icon type=image/ico href=/Cat.png id=fav>
 <script src=fav.js></script>
 <script src=https://unpkg.com/three@0.129.0/build/three.min.js></script>
@@ -13,10 +12,11 @@
 <body>
 <h1 style="padding:9px 0 9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
 <div class=basediv>
-<div class=contentdiv>
-<img src=assets/Vibin.gif class="center pixelart" style=height:15em;width:auto;transform:rotate(2deg)>
+<div style=display:flex;align-items:flex-start>
+<div class=contentdiv style=width:calc(auto-2em)>
+<img src=assets/Vibin.gif class="center pixelart" style=height:12em;width:auto;transform:rotate(2deg)>
 <hr>
-<p>Hello and welcome to my site. Look around! This place is fairly small, though I might add some other things here in the future. Currently it's just this page and a portfolio</p>
+<p>Hello and welcome to my site. Look around! This place is fairly small, though I might add some other things here in the future. There's a portfolio, about, tool section and half oa blog</p>
 <pre>  █   █
   ▒█ █▒
   █████
@@ -25,13 +25,14 @@
 ░ █████ ░</pre>
 * site best viewed on firefox <br><small>(since chrome blurs pixelart)</small>
 </div>
-<div class=showcase style="align-items:stretch;gap:1px 1px">
-<a class=neon href=portfolio.html>Portfolio</a>
-<a class=neonu href=tools.html>TOOLS</a>
+<a class=neonu href=portfolio.html>PORTFOLIO</a></div>
+<div class=showcase style="flex:column wrap;gap:1px 0;background:none;align-items:flex-start">
 <a class=neonu href=about.html>ABOUT</a>
-<a class=neon href=https://github.com/Ivory0xFF>Github</a>
-<a class=neon href=https://ivory0xff.itch.io>Itch</a>
-<a class=neon href=https://ivory0xff.tumblr.com>Tumblr</a></div>
+<a class=neonu href=https://github.com/Ivory0xFF>Github</a>
+<a class=neonu href=tools.html>TOOLS</a>
+<a class=neonu href=https://ivory0xff.itch.io>Itch</a>
+<a class=neonu href=blog.html>BLOG</a>
+<a class=neonu href=https://ivory0xff.tumblr.com>Tumblr</a></div>
 <script>var scene=new THREE.Scene();
 var camera=new THREE.PerspectiveCamera(50,(window.innerWidth)/(window.innerHeight),0.1,99);
 var renderer=new THREE.WebGLRenderer({alpha:true});
