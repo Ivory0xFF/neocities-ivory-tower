@@ -45,12 +45,11 @@ button:active{background-color:var(--scol);color:var(--pcol)}
 code{font-family:Monospace}
 .neon,.neonu{color:var(--pcol);font-size:2em;/*text-shadow:var(--pcol) 0 0 6px;box-shadow:var(--pcol) 0 0 8px;*/background:#1e3e3e;border:var(--pcol) .15rem solid;text-decoration:none;padding:.1rem}
 .neonu:active{text-shadow:var(--pcol) 0 0 6px;box-shadow:var(--pcol) 0 0 8px}
-.neonu{text-orientation:upright;writing-mode:vertical-rl}
+.neonu{text-orientation:upright;writing-mode:vertical-rl;padding:4px 0 4px 0}
 .ye{display:flex;flex-wrap:wrap}
 .onrow{float:left;display:inline}
 .card{background:var(--tcol);padding:.5rem}
-.card h2{margin:0}
-.card p{margin: 16px 0 0 0}
-.card h2{text-align:left;background:var(--tcol)}
+.card p{margin-top:16px}
+.card h2{text-align:left;background:var(--tcol);margin:0}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
 @media(orientation:portrait){.showcase img,.long,.viewport{width:100%;height:auto}.basediv{width:95%}.contentdiv{backdrop-filter:none}.img0{margin-top:45%}}
