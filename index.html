@@ -7,14 +7,14 @@
 <link href=style.css rel=stylesheet type=text/css media=all>
 <link rel=icon type=image/ico href=Cat.png id=fav>
 <script src=fav.js></script>
-<script src=https://unpkg.com/three@0.129.0/build/three.min.js></script>
+<script type=importmap>{"imports":{"three":"https://unpkg.com/three@0.156.0/build/three.module.min.js","three/addons/":"https://unpkg.com/three@0.156.0/examples/jsm/"}}</script>
 </head>
 <body>
 <h1 style="padding:9px 0 9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
-<div class=basediv>
+<div id=basediv>
 <div style=display:flex;align-items:flex-start>
 <div class=contentdiv style=width:calc(auto-2em)>
-<img src=assets/Vibin.gif class="center pixelart" style=height:12em;width:auto;transform:rotate(2deg)>
+<img src=assets/Vibin.gif class="center pixelart bordr" style=height:12em;width:auto;transform:rotate(2deg)>
 <hr>
 <p>Hello and welcome to my site. Look around! This place is fairly small, though I might add some other things here in the future. There's a portfolio, about, tool section and half a blog</p>
 <pre>  █   █
@@ -23,7 +23,7 @@
 ░ █▓█▓█ ░
  ░██▒██░
 ░ █████ ░</pre>
-<s></s>* site best viewed on firefox <br><small>(since chrome blurs pixelart)</small></s><br>pixelart now (probably) looks ok everywhere now
+<s>* site best viewed on firefox <br><small>(since chrome blurs pixelart)</small></s><br>pixelart now (probably) looks ok everywhere now
 </div>
 <a class=neonu href=portfolio.html>PORTFOLIO</a></div>
 <div class=showcase style="flex:column wrap;gap:1px 0;background:none;align-items:flex-start">
@@ -33,7 +33,11 @@
 <a class=neonu href=https://ivory0xff.itch.io>Itch</a>
 <a class=neonu href=blog.html>BLOG</a>
 <a class=neonu href=https://ivory0xff.tumblr.com>Tumblr</a></div>
-<script>var scene=new THREE.Scene();
+<script type=module>import * as THREE from"three";
+import{EffectComposer}from"three/addons/postprocessing/EffectComposer";
+import{RenderPass}from"three/addons/postprocessing/RenderPass.js"
+import{AfterimagePass}from"three/addons/postprocessing/AfterimagePass.js"
+var scene=new THREE.Scene();
 var camera=new THREE.PerspectiveCamera(50,1,0.1,99);
 var renderer=new THREE.WebGLRenderer({alpha:true});
 renderer.setClearColor(0xffffff,0);
@@ -43,7 +47,10 @@ renderer.domElement.style.cssText="z-index:-1;position:fixed;top:25%;width:100%"
 var icosa=new THREE.Mesh(new THREE.IcosahedronGeometry(5,2),new THREE.MeshNormalMaterial({wireframe:true}))
 scene.add(icosa)
 camera.position.z=12;
-var render=function(){
-requestAnimationFrame(render);icosa.rotation.y+=.01/16;icosa.rotation.z+=.02/16;renderer.render(scene,camera);};
+const composer=new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene,camera));
+composer.addPass(new AfterimagePass);
+function render(){
+requestAnimationFrame(render);icosa.rotation.y+=.01/16;icosa.rotation.z+=.02/16;composer.render();};
 render();</script>
 </div></body></html>

@@ -6,16 +6,18 @@
 <title>Portfolio</title>
 <link href=style.css rel=stylesheet type=text/css media=all>
 <link rel=icon type=image/ico href=Cat.png id=fav>
+<script type=importmap>
+{"imports":{"three":"https://unpkg.com/three@0.156.0/build/three.module.min.js","three/addons/":"https://unpkg.com/three@0.156.0/examples/jsm/"}}</script>
 <script type=module src=portfolio.js></script>
 </head>
 <body>
-<div class=modal>
-<span class=close tabindex=1>&times;</span>
+<div id=modal>
+<span id=close tabindex=1>&times;</span>
 <div class=center style=width:90vmin>
-<img class=img0>
-<p class=caption>
+<img id=img0>
+<p id=caption>
 </div></div>
-<div class=basediv>
+<div id=basediv>
 <div class=contentdiv>
 <small><a href=index.html>Home</a> > Portfolio</small>
 <h1>Look! It me portfolio!!</h1>
