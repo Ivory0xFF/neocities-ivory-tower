@@ -3,13 +3,13 @@
 <link href=style.css rel=stylesheet type=text/css media=all>
 </head>
 <body>
-<div id=basediv>
-<div class=contentdiv>
+<div class=base>
+<div class=content>
 <h1>The 0-1 range</h1>
 <p>&emsp;I recently realized how cool math actually is. For a relatively long time I thought it was pretty boring and a lot of stuff seemed kinda useless, but it's actually incredibly cool! 0 and 1 might not look like a lot but when paired together they are incredibly useful (and I'm not talking about the binary system, though it's interesting too).<br>&emsp;In shaders colors aren't represented by integers ranging from 0-255. Instead they're floats between 0 and 1. At first this change is weird until you realize somethging: now you can use masks, map gradients and do funky stuff. Think about multiplication: if you multiply a black and white image with another one you end up with an image that's bright only where two white spots overlap on the two original images, because anything * 0 is 0.
 <br>&emsp;Another fun fact! percentages are all actually numbers ranging between 1 and 0. I know this is obvious but that means multiplying, say, gray with another color is like halving the value of said color. That's not something you can do with regular RGB values, because... 127 • 255 ≠ 127 :(</p>
-<p><input type=range class=slider max=1 step=.01><br>
-<input type=range class=slider max=1 step=.01>
+<p><input type=range max=1 step=.01><br>
+<input type=range max=1 step=.01>
 <code id=res>0.5 * 0.5 == 0.250</code></p>
 <script>
 var res=document.getElementById("res");

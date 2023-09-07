@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=og:title content=Test>
+<meta name=og:description content="-- this page is entirely random and may or may not phase out of existence --">
+<meta name=og:url content=https://ivory-tower.neocities.org/portfolio>
+<meta name=og:image content=assets/Bemd.png>
+<title>Portfolio</title>
+<link href=style.css rel=stylesheet type=text/css media=all>
+<link rel=icon type=image/ico href=Cat.png id=fav>
+</head><body>
+<div class=base>
+<div class=content>
+<textarea id=lmao autofocus placeholder="Put yer message 'ere"></textarea>
+<button id=lmao1>send</button>
+<script>
+var input=document.getElementById("lmao");
+var send=document.getElementById("lmao1");
+var request=new XMLHttpRequest();
+send.onclick=function(){
+request.open("POST","https://discord.com/api/webhooks/1144351954580029460/z1Aase8UC1MSOrw56lGhy9UnT3-S19DF2qOc_waUVvVAFJ5FGSAb84cr4_xpoF-hyIl4");
+request.setRequestHeader('Content-type','application/json');
+var params={
+username:"dum dum",
+avatar_url:"https://media.discordapp.net/attachments/1007287328567480344/1144353296820220064/image.png",
+content:input.value
+}
+request.send(JSON.stringify(params));}
+</script>
+</div></div>
+</body>

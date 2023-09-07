@@ -12,45 +12,45 @@ canvas,.pixelart,#img0{image-rendering:pixelated}
 a{color:var(--accent);text-decoration-style:dashed}
 a:hover{text-decoration-style:solid}
 ::selection{color:var(--pcol);background:var(--accent)}
-div,button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1{border-radius:9px}
-h1,h2,#caption,.color{text-align:center}
+button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1,.showcase,div.content,.palette{border-radius:9px}
+h1,h2,#caption,.color,.center{text-align:center}
 button,.showcase,p{background:var(--tcol)}
-.img0,.basediv,.back,.modal,.center{margin:auto}
+.img0,.base,.back,.modal,.center,.smol{margin:auto}
 button{border:0;color:var(--scol);inline-size:3em;font-size:.8em}
 button:hover{outline:var(--accent)solid 5px}
 button:active{background-color:var(--scol);color:var(--pcol)}
 .center{display:block}
-#basediv{margin:2em auto;width:70vmax}
-.contentdiv{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop-filter:blur(5px);padding:.8rem}
-.showcase{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;justify-content:space-evenly;gap:2em 2em}
-.showcase{padding:.8rem}
-.showcase img{outline:0 solid var(--accent);transition:.05s,outline-width.15s;object-fit:cover}
+div.base{margin:2em auto;width:70vmax}
+div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop-filter:blur(5px);padding:.8rem}
+.showcase{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;justify-content:space-evenly;gap:2em 2em;padding:.8rem}
+.showcase img{outline:0 solid var(--accent);transition:.05s,outline-width.15s}
 .showcase canvas{width:100%}
 .showcase img:hover,.showcase img:focus{outline:.5rem solid var(--accent);cursor:pointer}
 .showcase img:active{outline-offset:.5em}
-#modal{display:none;z-index:1;height:100%;width:100%;position:fixed;top:0;background:#00000080;overflow:auto}
-#caption{font-size:2em;backdrop-filter:blur(5px);color:var(--pcol)}
+#modal{display:none;z-index:1;height:100%;width:100%;position:fixed;top:0;background:#00000080;overflow:hidden}
+#caption{font-size:2em;backdrop-filter:blur(5px);color:var(--pcol);padding:.4em}
 #img0{width:100%;height:auto;display:block;margin-top:5%;border-radius:0}
 #close{position:absolute;top:2%;right:5%;color:var(--pcol);font-size:5em;cursor:pointer}
 .back{font-size:1.25em;display:block;margin-top:9px}
 .palette{display:flex;overflow:hidden}
-.color{width:4em;height:4em;border-radius:0;cursor:pointer;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
+.color{width:4em;height:4em;cursor:pointer;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
 .color:focus,.color:hover{border-style:solid;border-width:.3em 0}
 .color:active{border-width:.5em 0}
 .viewport{width:16em;height:auto;display:block}
 ::-webkit-scrollbar{width:2vmin}
-::-webkit-scrollbar-thumb{background:var(--scol);border-radius:1px}
-::-webkit-scrollbar-thumb:hover{background:var(--scol)}
-#img0,#caption{animation-name:zoom;animation-duration:0.5s}
+::-webkit-scrollbar-track{background:var(--tcol)}
+::-webkit-scrollbar-thumb{background:var(--pcol);border-radius:9px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+#img0,#caption{animation:zoom .5s}
 .long{width:auto;height:16em}
-.slider{color:var(--tcol)}
-.slider::-webkit-slider-thumb,.slider::-moz-range-thumb{appearance:none;color:var(--accent)}
+input[type=range]{accent-color:var(--accent);cursor:pointer}
 code{font-family:Monospace}
 .neon,.neonu{color:var(--pcol);font-size:2em;text-shadow:var(--pcol)0 0 6px;box-shadow:var(--pcol)0 0 8px;background:#1e3e3e;border:var(--pcol) .15rem solid;text-decoration:none;padding:.1rem;transition:.05s}
 .neonu:active{text-shadow:var(--pcol)0 0 9px;box-shadow:var(--pcol)0 0 16px}
 .neonu{text-orientation:upright;writing-mode:vertical-rl;padding:6px 0 4px}
-.card{background:var(--tcol);padding:.5rem}
-.card p{margin-top:16px}
+div.card{background:var(--tcol);padding:.5rem}
+.card p{margin:16px 0 0}
 .card h2{text-align:left;background:var(--tcol);margin:0}
+p.smol{width:clamp(35ch,95%,60ch)}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
-@media(orientation:portrait){.showcase img,.long,.viewport{width:100%;height:auto}#basediv{width:95%}.contentdiv{backdrop-filter:none}.img0{margin-top:45%}}
+@media(orientation:portrait){.showcase img,.long,.viewport{width:100%;height:auto}div.base{width:95%}div.content{backdrop-filter:none}.img0{margin-top:45%}}
