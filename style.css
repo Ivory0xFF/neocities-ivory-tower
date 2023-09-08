@@ -52,5 +52,6 @@ div.card{background:var(--tcol);padding:.5rem}
 .card p{margin:16px 0 0}
 .card h2{text-align:left;background:var(--tcol);margin:0}
 p.smol{width:clamp(35ch,95%,60ch)}
+.spoiler{background:var(--scol);}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
 @media(orientation:portrait){.showcase img,.long,.viewport{width:100%;height:auto}div.base{width:95%}div.content{backdrop-filter:none}.img0{margin-top:45%}}
