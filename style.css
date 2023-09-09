@@ -36,8 +36,8 @@ div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop
 #img0,#caption{animation:zoom .5s}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
 .back{font-size:1.25em;display:block;margin-top:9px}
-.palette{display:flex;overflow:hidden}
-.color{width:4em;height:4em;cursor:pointer;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
+.palette{display:flex;overflow:hidden;flex-wrap:wrap;max-width:16em}
+.color{width:4em;height:4em;flex:1 0 auto;cursor:pointer;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
 .color:focus,.color:hover{border-style:solid;border-width:.3em 0}
 .color:active{border-width:.5em 0}
 .long{width:auto;height:16em}
