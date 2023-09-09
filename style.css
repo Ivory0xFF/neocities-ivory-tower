@@ -40,6 +40,7 @@ div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop
 .color{width:4em;height:4em;flex:1 0 auto;cursor:pointer;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
 .color:focus,.color:hover{border-style:solid;border-width:.3em 0}
 .color:active{border-width:.5em 0}
+.color:focus-visible{outline:0}
 .long{width:auto;height:16em}
 input[type=range]{accent-color:var(--accent);cursor:pointer}
 code{font-family:Monospace}

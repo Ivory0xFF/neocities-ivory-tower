@@ -11,5 +11,5 @@ for (l=0;l<m.length;l++){if(m[l]!="ff"){ihex+=(255-parseInt(m[l],16)).toString(1
 div.style.cssText="background-color:#"+colors[a]+";color:#"+ihex;
 div.className="color";
 div.innerText=colors[a];
-div.setAttribute("onclick",`navigator.clipboard.writeText("${colors[a]}")`);
-}}};
+div.onclick=`navigator.clipboard.writeText("${colors[a]}")`;
+div.tabIndex="0";}}};
