@@ -2,7 +2,7 @@
 :root{--accent:#930052;--pcol:#20B2AA;--scol:#2F4F4F;--tcol:#20b2aa80}
 body{background:#743636;color:var(--scol);font-family:'Comfortaa',Monospace,Verdana;margin:0}
 h1{background:var(--scol);color:var(--pcol);font-size:2em}
-h2{padding:5px}
+h1,h2{padding:5px}
 h1,h2{font-family:'MuseoModerno'}
 hr{border:4px solid var(--scol);padding:2px} 
 p{font-size:1em;padding:5px;border-radius:5px}
@@ -27,7 +27,8 @@ div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop
 .showcase img{outline:0 solid var(--accent);transition:.05s,outline-width.15s}
 .showcase canvas{width:100%}
 .showcase img:hover,.showcase img:focus,a:focus-visible{outline:.5rem solid var(--accent);cursor:pointer}
-.showcase img:active,a:focus-visible{outline-offset:.5em}
+a:focus-visible{outline-width:.2rem;outline-offset:.1em}
+.showcase img:active{outline-offset:.5em}
 .viewport{width:16em;height:auto;display:block}
 #modal{display:none;z-index:1;height:100%;width:100%;position:fixed;top:0;background:#00000080;overflow:hidden}
 #caption{font-size:2em;backdrop-filter:blur(5px);color:var(--pcol);padding:.4em}
@@ -45,13 +46,13 @@ div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop
 input[type=range]{accent-color:var(--accent);cursor:pointer}
 code{font-family:Monospace}
 .neon,.neonu{color:var(--pcol);font-size:2em;text-shadow:var(--pcol)0 0 6px;box-shadow:var(--pcol)0 0 8px;background:#1e3e3e;border:var(--pcol) .15rem solid;text-decoration:none;padding:.1rem;transition:.05s}
-.neonu:active{text-shadow:var(--pcol)0 0 9px;box-shadow:var(--pcol)0 0 16px}
+.neonu:hover{text-shadow:0 0 10px;box-shadow:0 0 20px}
+.neonu:active{text-shadow:0 0 9px;box-shadow:0 0 16px}
 .neonu{text-orientation:upright;writing-mode:vertical-rl;padding:6px 0 4px}
 div.card{background:var(--tcol);padding:.5rem}
 .card p{margin:16px 0 0}
 .card h2{text-align:left;background:var(--tcol);margin:0}
-p.smol{width:clamp(35ch,95%,60ch)}
-.spoiler:hover{filter:none}
+.smol{width:clamp(35ch,95%,60ch)}
 ::-webkit-scrollbar{width:2vmin}
 ::-webkit-scrollbar-track{background:var(--tcol)}
 ::-webkit-scrollbar-thumb{background:var(--pcol);border-radius:9px}
