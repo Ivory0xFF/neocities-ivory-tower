@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=MuseoModerno&display=swap');
 :root{--accent:#930052;--pcol:#20B2AA;--scol:#2F4F4F;--tcol:#20b2aa80}
+*{scrollbar-color:var(--tcol)#0000}
 body{background:#743636;color:var(--scol);font-family:'Comfortaa',Monospace,Verdana;margin:0}
 h1{background:var(--scol);color:var(--pcol);font-size:2em}
 h1,h2{padding:5px}
@@ -53,8 +54,7 @@ div.card{background:var(--tcol);padding:.5rem}
 .card p{margin:16px 0 0}
 .card h2{text-align:left;background:var(--tcol);margin:0}
 .smol{width:clamp(35ch,95%,60ch)}
-::-webkit-scrollbar{width:2vmin}
-::-webkit-scrollbar-track{background:var(--tcol)}
-::-webkit-scrollbar-thumb{background:var(--pcol);border-radius:9px}
-::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+::-webkit-scrollbar-track{background:#000000}
+::-webkit-scrollbar-thumb{background:var(--tcol);border-radius:9px}
+::-webkit-scrollbar-thumb:hover{background:var(--pcol)}
 @media(orientation:portrait){.showcase img,.long,.viewport{width:100%;height:auto}div.base{width:95%}div.content{backdrop-filter:none}.img0{margin-top:45%}}
