@@ -54,7 +54,8 @@ div.card{background:var(--tcol);padding:.5rem}
 .card p{margin:16px 0 0}
 .card h2{text-align:left;background:var(--tcol);margin:0}
 .smol{width:clamp(35ch,95%,60ch)}
-::-webkit-scrollbar-track{background:#000000}
-::-webkit-scrollbar-thumb{background:var(--tcol);border-radius:9px}
+::-webkit-scrollbar{background:#0000}
+::-webkit-scrollbar-track{background:#0000}
+::-webkit-scrollbar-thumb{background:var(--tcol)}
 ::-webkit-scrollbar-thumb:hover{background:var(--pcol)}
 @media(orientation:portrait){.showcase img,.long,.viewport{width:100%;height:auto}div.base{width:95%}div.content{backdrop-filter:none}.img0{margin-top:45%}}
