@@ -10,13 +10,13 @@ p{font-size:1em;padding:5px;border-radius:5px}
 img{width:16em}
 a{color:var(--accent);text-decoration-style:dashed}
 a:hover,a:focus-visible{text-decoration-style:solid}
-button{border:0;color:var(--scol);inline-size:3em;font-size:.8em}
+button{border:0;color:var(--scol);inline-size:3em;font-size:.8em;transition:0.1s}
 button:hover,button:focus{outline:var(--accent)solid 5px}
 button:active{background-color:var(--scol);color:var(--pcol)}
 ::selection{color:var(--pcol);background:var(--accent)}
 canvas,.pixelart,#img0{image-rendering:pixelated}
 button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1,.showcase,div.content,.palette,div.card,a{border-radius:9px}
-h1,h2,#caption,.color,.center{text-align:center}
+h1,h2,#caption,.color,.center,.tag{text-align:center}
 button,.showcase,p{background:var(--tcol)}
 pre{font-size:1.5em}
 .img0,.base,.back,.modal,.center,.smol{margin:auto}
@@ -38,7 +38,7 @@ a:focus-visible{outline-width:.2rem;outline-offset:.1em}
 #img0,#caption{animation:zoom .5s}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
 .back{font-size:1.25em;display:block;margin-top:9px}
-.palette{display:flex;overflow:hidden;flex-wrap:wrap;max-width:16em}
+.palette{display:flex;overflow:hidden;flex-wrap:wrap;max-width:32em}
 .color{width:4em;height:4em;flex:1 0 auto;cursor:pointer;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
 .color:focus,.color:hover{border-style:solid;border-width:.3em 0}
 .color:active{border-width:.5em 0}
@@ -54,6 +54,9 @@ div.card{background:var(--tcol);padding:.5rem}
 .card p{margin:16px 0 0}
 .card h2{text-align:left;background:var(--tcol);margin:0}
 .smol{width:clamp(35ch,95%,60ch)}
+.tag{display:inline-block;background:#0ff3;font-size:1.2em;padding:4px 4px 0;border-radius:9px 9px 0 0;margin-left:50%;transform:translateX(-50%)}
+.tag img{height:16px;width:auto}
+.tag img:active{outline-offset:0}
 ::-webkit-scrollbar{background:#0000}
 ::-webkit-scrollbar-track{background:#0000}
 ::-webkit-scrollbar-thumb{background:var(--tcol)}
