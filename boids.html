@@ -1,14 +1,16 @@
 <!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1">
 <title>Boidscargo run --release --target wasm32-unknown-unknown</title>
+<link href=style.css rel=stylesheet type=text/css media=all>
+<link rel=icon type=image/ico href=Cat.png id=fav>
 </head>
 <body>
 <script type="module">
-import init,{bruh}from"./boids/pkg/boids.js";
-init().then(()=>{bruh("WebAssembly");});
+import init,{start}from"./boids/pkg/boids.js";
+init().then(()=>{start();});
 </script>
 <div class=base>
 <div class=content>
-
+<canvas id=boids></canvas>
 </div>
 </div>
 </body></html>

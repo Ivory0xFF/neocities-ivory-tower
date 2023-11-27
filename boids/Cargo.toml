@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 wasm-bindgen = "0.2.88"
+web-sys = "0.3.65"
 
 [lib]
 crate-type = ["cdylib"]
