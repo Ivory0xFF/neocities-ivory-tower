@@ -11,13 +11,13 @@ for (var i = 0; i < showcases.length; i++) {
         imgs[z].onclick = function () {
             img.src = this.src;
             caption.innerText = this.alt;
-            modal.style.display = "block";
+            modal.style.display = "flex";
         };
         imgs[z].onkeydown = function (k) {
             if (k.key == "Enter") {
                 img.src = this.src;
                 caption.innerText = this.alt;
-                modal.style.display = "block";
+                modal.style.display = "flex";
             }
         }
     }

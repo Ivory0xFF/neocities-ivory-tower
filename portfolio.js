@@ -16,7 +16,7 @@ function create_viewport(mesh, col) {
     camera.position.z = 5;
     scene.add(light);
     scene.add(new THREE.AmbientLight(0xffffff, 2));
-    gltfloader.load(`/${mesh}.gltf`, function (gltf) {
+    gltfloader.load(`/assets/${mesh}.gltf`, function (gltf) {
         scene.add(gltf.scene);
         setInterval(function () {
             gltf.scene.rotation.y += .01

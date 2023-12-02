@@ -15,7 +15,7 @@ button:hover,button:focus{outline:var(--accent)solid 5px}
 button:active{background-color:var(--scol);color:var(--pcol)}
 ::selection{color:var(--pcol);background:var(--accent)}
 canvas,.pixelart,#img0{image-rendering:pixelated}
-button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1,.showcase,div.content,.palette,div.card,a{border-radius:9px}
+button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1,.showcase,div.content,.palette,div.card,a,#img0bg{border-radius:9px}
 h1,h2,#caption,.color,.center,.tag{text-align:center}
 button,.showcase,p{background:var(--tcol)}
 pre{font-size:1.5em}
@@ -31,11 +31,12 @@ div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop
 a:focus-visible{outline-width:.2rem;outline-offset:.1em}
 .showcase img:active{outline-offset:.5em}
 .viewport{width:16em;height:auto;display:block}
-#modal{display:none;z-index:1;height:100%;width:100%;position:fixed;top:0;background:#00000080;overflow:hidden}
-#caption{font-size:2em;backdrop-filter:blur(5px);color:var(--pcol);padding:.4em}
-#img0{width:100%;height:auto;display:block;margin-top:5%;border-radius:0}
+#modal{display:none;z-index:1;height:100%;width:100%;position:fixed;top:0;background:#00111180;overflow:scroll}
+#caption{font-size:2em;color:var(--pcol);padding:.2em;margin:.5em}
+#img0{width:100%;height:auto;border-radius:0}
+#img0bg{width:80vmin;backdrop-filter:blur(5px);background:var(--tcol);padding:9px}
 #close{position:absolute;top:2%;right:5%;color:var(--pcol);font-size:5em;cursor:pointer}
-#img0,#caption{animation:zoom .5s}
+#img0bg{animation:zoom .5s}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
 .back{font-size:1.25em;display:block;margin-top:9px}
 .palette{display:flex;overflow:hidden;flex-wrap:wrap;max-width:32em}
