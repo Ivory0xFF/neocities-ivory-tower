@@ -1,47 +1,77 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1">
-<meta property=og:image content=assets/Bemd.png>
-<meta property=og:title content=Hello>
-<meta property=og:description content=B)>
-<meta property=og:url content=https://ivory-tower.neocities.org/>
-<title>Me site</title>
-<link href=style.css rel=stylesheet type=text/css media=all>
-<link rel=icon type=image/ico href=Cat.png id=fav>
-<script src=fav.js></script>
-<script type=importmap>{"imports":{"three":"https://unpkg.com/three@0.156.0/build/three.module.min.js"}}</script>
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta property=og:image content=/assets/The.png>
+    <meta property=og:title content=Hello>
+    <meta property=og:description content=B)>
+    <meta property=og:url content=https://ivory-tower.neocities.org/>
+    <title>Me site</title>
+    <link href=style.css rel=stylesheet type=text/css media=all>
+    <link rel=icon type=image/ico href=Cat.png id=fav>
+    <script src=fav.js></script>
+    <script type=importmap>
+    {
+      "imports":
+        {
+            "three":"https://unpkg.com/three@0.156.0/build/three.module.min.js"
+        }
+    }
+    </script>
 </head>
 <body>
-<h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
-<div class=base>
-<div style=display:flex;align-items:flex-start>
-<div class=content>
-<img src=assets/Vibin.gif class="center pixelart bordr" style=height:12em;width:auto;transform:rotate(2deg)>
-<hr>
-<p>Hello and welcome to my site. Look around! This place is fairly small, though I might add some other things here in the future. There's a portfolio, about, tool section and half a blog</p>
-<div style="display:flex;gap:0 2em"><pre>  █   █
+    <h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
+    <div class=base>
+        <div style=display:flex;align-items:flex-start>
+            <div class=content>
+                <img src=assets/Vibin.gif class="center pixelart bordr" style=height:12em;width:auto;transform:rotate(2deg)>
+                <hr>
+                <p>Hello and welcome to my site. Look around! This place is fairly small, though I might add some other things here in the future. There's a portfolio, about, tool section and half a blog</p>
+                <div style="display:flex;gap:0 2em">
+                <pre>  █   █
   ▒█ █▒
   █████
 ░ █▓█▓█ ░
  ░██▒██░
 ░ █████ ░</pre>
-<pre>░░██░
+                <pre>░░██░
 █░░░█
 ░░░█░
 █░░░█
-░░██░</pre></div>
-</div></div>
-<div class=showcase style="background:0;align-items:flex-start">
-<a class=neon href=portfolio.html>PORTFOLIO</a><a class=neon href=about.html>ABOUT</a><a class=neon href=https://github.com/Ivory0xFF>Github</a><a class=neon href=tools.html>TOOLS</a><a class=neon href=https://ivory0xff.itch.io>Itch</a><a class=neon href=blog.html>BLOG</a><a class=neon href=https://ivory0xff.tumblr.com>Tumblr</a></div>
-<script type=module>import * as THREE from"three";
-var scene=new THREE.Scene();
-var camera=new THREE.PerspectiveCamera(50,1,0.1,99);
-var renderer=new THREE.WebGLRenderer({alpha:true});
-renderer.setClearColor(0xffffff,0);
-renderer.setSize(window.innerWidth/3,window.innerWidth/3);
-document.body.appendChild(renderer.domElement);
-renderer.domElement.style.cssText="z-index:-1;position:fixed;top:25%;width:100%"
-var icosa=new THREE.Mesh(new THREE.IcosahedronGeometry(5,2),new THREE.MeshNormalMaterial({wireframe:true}));
-scene.add(icosa)
-camera.position.z=12;
-function render(){requestAnimationFrame(render);icosa.rotation.y+=.01/16;icosa.rotation.z+=.02/16;renderer.render(scene,camera);};
-render();</script>
-</div></body></html>
+░░██░</pre>
+            </div>
+          </div>
+        </div>
+        <div class=showcase style="background:0;align-items:flex-start">
+            <a class=neon href=portfolio.html>PORTFOLIO</a>
+            <a class=neon href=about.html>ABOUT</a>
+            <a class=neon href=https://github.com/Ivory0xFF>Github</a>
+            <a class=neon href=tools.html>TOOLS</a>
+            <a class=neon href=https://ivory0xff.itch.io>Itch</a>
+            <a class=neon href=blog.html>BLOG</a>
+            <a class=neon href=https://ivory0xff.tumblr.com>Tumblr</a>
+        </div>
+        <script type=module>
+          import * as THREE from "three";
+          var scene = new THREE.Scene();
+          var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 99);
+          var renderer = new THREE.WebGLRenderer({alpha: true});
+          renderer.setClearColor(0xffffff, 0);
+          renderer.setSize(window.innerWidth / 3, window.innerWidth / 3);
+          document.body.appendChild(renderer.domElement);
+          renderer.domElement.style.cssText = "z-index:-1;position:fixed;top:25%;width:100%";
+          var icosa = new THREE.Mesh(new THREE.IcosahedronGeometry(5, 2), new THREE.MeshNormalMaterial({wireframe: true}));
+          scene.add(icosa);
+          camera.position.z = 12;
+          function render() {
+              requestAnimationFrame(render);
+              icosa.rotation.y += .01 / 16;
+              icosa.rotation.z += .02 / 16;
+              renderer.render(scene, camera);
+          };
+          render();
+        </script>
+    </div>
+</body>
+</html>

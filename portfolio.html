@@ -1,44 +1,64 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=og:title content="My portfolio">
-<meta name=og:description content=:3>
-<meta name=og:url content=https://ivory-tower.neocities.org/portfolio>
-<meta name=og:image content=assets/Bemd.png>
-<title>Portfolio</title>
-<link href=style.css rel=stylesheet type=text/css media=all>
-<link rel=icon type=image/ico href=Cat.png id=fav>
-<script type=importmap>{"imports":{"three":"https://unpkg.com/three@0.156.0/build/three.module.min.js","three/addons/":"https://unpkg.com/three@0.156.0/examples/jsm/"}}</script>
-<script type=module src=portfolio.js></script>
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=og:image content=/assets/SpinningBanana.gif>
+    <meta name=og:title content="Portfolio">
+    <meta name=og:description content="Here lie the things I made and want people to see">
+    <meta name=og:url content=https://ivory-tower.neocities.org/portfolio>
+    <title>Portfolio</title>
+    <link href=style.css rel=stylesheet type=text/css media=all>
+    <link rel=icon type=image/ico href=Cat.png id=fav>
+    <script type=importmap>
+        {
+            "imports": 
+            {
+                "three":"https://unpkg.com/three@0.156.0/build/three.module.min.js",
+                "three/addons":"https://unpkg.com/three@0.156.0/examples/jsm"
+            }
+        }
+    </script>
+    <script type=module src=portfolio.js></script>
 </head>
 <body>
-<div id=modal>
-<span id=close tabindex=1>&times;</span>
-<div class=center style=width:80vmin>
-<img id=img0>
-<p id=caption>
-</div></div>
-<div class=base>
-<div class=content>
-<small><a href=index.html>Home</a> > Portfolio</small>
-<h1>Look! It me portfolio!!</h1>
-<p style=text-align:left>You can click on images to take a closer look.<br>Viewport controls: click + drag to rotate the camera, right click to pan and scroll to zoom in/out<br>Note: most pixelart here is scaled to 300% but I'm also using pixelated sampling</p>
-<hr>
-<h2 id=models><a href=#models>#Models</a></h2>
-<div class=showcase>
-<img src=assets/BananSlices.png alt="banan, 24 Feb 2023"class=pixelart>
-<img src=assets/Lips.jpg alt="soap, 22 Aug 2023">
-<img src=assets/Hampter.png alt="hampter, 1 May 2023 (sorta)"class=pixelart>
-<img src=assets/CD.gif alt="cat beats, 1 Aug 2023"class=pixelart>
-<img src=assets/HotDog.png alt="ho dog, 26 May 2023"class=pixelart>
-<div id=Banan class=viewport></div>
-<div id=BobaTea class=viewport></div>
-</div><hr>
-<h2 id=pixelart><a href=#pixelart>#Pixelart</a></h2>
-<div class="showcase pixelart">
-<img src=assets/Vibin.gif alt="11 Jun 2023"class=long>
-<img src=assets/Bemd.png alt="8 Jul 2023">
-<img src=assets/SpinningBanana.gif alt="menacing banna, 3 Aug 2023"class=long>
-<img src=assets/Eye.png alt="eye, 27 Jun 2023">
-</div><hr>
-<h2 id=music><a href=#music><s>#Music</s> there's no music :(</a></h2>
-<button class=back onclick=history.back()>Back</button>
-</div></div><script src=/modal.js></script></body></html>
+    <div id=modal>
+        <span id=close tabindex=1>&times;</span>
+        <div class=center style=width:80vmin>
+            <img id=img0>
+            <p id=caption>
+        </div>
+    </div>
+    <div class=base>
+        <div class=content>
+            <small><a href=index.html>Home</a> > Portfolio</small>
+            <h1>Look! It me portfolio!!</h1>
+            <p style=text-align:left>You can click on images to take a closer look.<br>Viewport controls: click + drag to rotate the camera, right click to pan and scroll to zoom in/out<br>Note: most pixelart here is scaled to 300% but I'm also using pixelated sampling</p>
+            <hr>
+            <h2 id=models><a href=#models>#Models</a></h2>
+            <div class=showcase>
+                <img src=assets/BananSlices.png alt="banan, 24 Feb 2023" class=pixelart>
+                <img src=assets/Lips.jpg alt="soap, 22 Aug 2023">
+                <img src=assets/Hampter.png alt="hampter, 1 May 2023 (sorta)" class=pixelart>
+                <img src=assets/CD.gif alt="cat beats, 1 Aug 2023" class=pixelart>
+                <img src=assets/HotDog.png alt="ho dog, 26 May 2023" class=pixelart>
+                <div id=Banan class=viewport></div>
+                <div id=BobaTea class=viewport></div>
+            </div>
+            <hr>
+            <h2 id=pixelart><a href=#pixelart>#Pixelart</a></h2>
+            <div class="showcase pixelart">
+                <img src=assets/The.png alt="1 Dec 2023">
+                <img src=assets/Vibin.gif alt="11 Jun 2023" class=long>
+                <img src=assets/Bemd.png alt="8 Jul 2023">
+                <img src=assets/SpinningBanana.gif alt="menacing banna, 3 Aug 2023" class=long>
+                <img src=assets/Eye.png alt="27 Jun 2023">
+            </div>
+            <hr>
+            <h2 id=music><a href=#music><s>#Music</s> there's no music :(</a></h2>
+            <button class=back onclick=history.back()>Back</button>
+        </div>
+    </div>
+    <script src=/modal.js></script>
+</body>
+</html>
