@@ -8,15 +8,11 @@ function create_viewport(mesh, col) {
     const renderer = new THREE.WebGLRenderer();
     const light = new THREE.PointLight(0xffffff, 2);
     new OrbitControls(camera, renderer.domElement);
-    light
-        .position
-        .set(0, 2, 0);
+    light.position.set(0, 2, 0);
     renderer.setClearColor(col, 1);
     renderer.setSize(128, 128);
     renderer.domElement.style.cssText = "";
-    document
-        .getElementById(mesh)
-        .appendChild(renderer.domElement);
+    document.getElementById(mesh).appendChild(renderer.domElement);
     camera.position.z = 5;
     scene.add(light);
     scene.add(new THREE.AmbientLight(0xffffff, 2));
