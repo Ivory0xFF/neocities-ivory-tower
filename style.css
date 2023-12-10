@@ -64,4 +64,4 @@ div.card{background:var(--tcol);padding:.5rem}
 ::-webkit-scrollbar-track{background:#0000}
 ::-webkit-scrollbar-thumb{background:var(--tcol)}
 ::-webkit-scrollbar-thumb:hover{background:var(--pcol)}
-@media(orientation:portrait){.showcase img,.long,.viewport{width:100%;height:auto}div.base{width:95%}body{font-size:0.8rem}div.content{backdrop-filter:none}.img0{margin-top:45%}#img0bg{backdrop-filter:none}}
+@media(orientation:portrait){.showcase>img,.long,.viewport{width:100%;height:auto}div.base{width:95%}body{font-size:0.8rem}div.content,#img0bg{backdrop-filter:none}}
