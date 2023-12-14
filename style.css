@@ -14,7 +14,7 @@ button{border:0;color:var(--scol);inline-size:3em;font-size:.8em;transition:0.1s
 button:hover,button:focus{outline:var(--accent)solid 5px}
 button:active{background-color:var(--scol);color:var(--pcol)}
 ::selection{color:var(--pcol);background:var(--accent)}
-canvas,.pixelart,#img0{image-rendering:pixelated}
+canvas,.pixelart{image-rendering:pixelated}
 button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1,.showcase,div.content,.palette,div.card,a,#img0bg{border-radius:9px}
 h1,h2,#caption,.color,.center,.tag{text-align:center}
 button,.showcase,p{background:var(--tcol)}
@@ -25,24 +25,26 @@ pre{font-size:1.5em}
 .center{display:block}
 div.base{margin:2em auto;width:70vmax}
 div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop-filter:blur(5px);padding:.8rem}
-.showcase{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;justify-content:space-evenly;gap:1em 2em;padding:.8rem}
+.showcase{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;justify-content:space-evenly;gap:1em 1em;padding:.8em}
 .showcase img{outline:0 solid var(--accent);transition:.05s,outline-width.15s}
-.showcase canvas{width:100%}
-.showcase img:hover,.showcase img:focus,a:focus-visible{outline:.5rem solid var(--accent);cursor:pointer}
-a:focus-visible{outline-width:.2rem;outline-offset:.1em}
+.showcase img:hover,.showcase img:focus,a:focus-visible{outline:.5em solid var(--accent);cursor:pointer}
 .showcase img:active{outline-offset:.5em}
-.viewport{width:16em;height:auto;display:block}
-#modal{display:none;z-index:9;height:100%;width:100%;position:fixed;top:0;background:#00111180;overflow:scroll}
+a:focus-visible{outline-width:.2rem;outline-offset:.1em}
+.viewport{height:auto;display:block}
+.viewport canvas{width:100%}
+.showcase img, .viewport{flex:1 1 16em;max-width:32em;max-height:32em}
+#modal{display:none;z-index:9;height:100%;width:100%;position:fixed;top:0;background:#00111180;overflow:scroll;animation:fade .5s}
 #caption{font-size:2em;color:var(--accent);padding:.2em;margin:.5em}
 #img0{width:100%;height:auto;border-radius:0}
-#img0bg{width:80vmin;backdrop-filter:blur(5px);background:var(--tcol);padding:9px;animation:zoom .5s}
+#img0bg{width:80vmin;backdrop-filter:blur(5px);background:var(--tcol);padding:9px;animation:zoom .5s, fade .5s}
 #close{position:absolute;top:2%;right:5%;color:var(--pcol);font-size:5em}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
 .back{font-size:1.25em;display:block;margin-top:9px}
 .palette{display:flex;overflow:hidden;flex-wrap:wrap;max-width:32em}
 .color{width:4em;height:4em;flex:1 0 auto;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
 .color:focus,.color:hover{border-style:solid;border-width:.3em 0}.color:active{border-width:.5em 0}.color:focus-visible{outline:0}
-.long{width:auto;height:16em}
+.long{width:32em;flex:2 1}
 input[type=range]{accent-color:var(--accent);cursor:pointer}
 code{font-family:Monospace}
 .neon{color:var(--pcol);font-size:2em;text-shadow:var(--pcol)0 0 6px;box-shadow:var(--pcol)0 0 8px;background:#1e3e3e;border:var(--pcol) .15rem solid;text-decoration:none;padding:.1rem;transition:.05s}
