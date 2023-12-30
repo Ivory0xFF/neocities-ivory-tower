@@ -8,9 +8,22 @@
     <link rel=icon type=image/ico href=Cat.png id=fav>
 </head>
 <body>
+    <!-- Rust stuff -->
     <script type="module">
         import init, {start} from "./boids/pkg/boids.js";
         init().then(()=>{start();});
+    </script>
+    <!-- WebGPU stuff -->
+    <script type=module>
+    async function main() {
+      const adapter = await navigator.gpu.requestAdapter();
+      const device = await adapter.requestDevice();
+      if (!device) {
+        console.log("need a browser that supports WebGPU");
+        return;
+      }
+    }
+    main();
     </script>
     <div class=base>
         <div class=content>
