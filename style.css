@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=MuseoModerno&display=swap');
 :root{--accent:#b71c4a;--pcol:#35b091;--scol:#033445;--tcol:#35b09180}
 *{scrollbar-color:var(--tcol)#0000;scroll-behavior:smooth}
+::selection{color:var(--pcol);background:var(--accent)}
 body{background:#440020;color:var(--scol);font-family:'Comfortaa',Monospace,Verdana;margin:0}
 h1{background:var(--scol);color:var(--pcol);font-size:2em}
 h1,h2{padding:5px;font-family:'MuseoModerno'}
@@ -12,7 +13,6 @@ a:hover,a:focus-visible{text-decoration-style:solid}
 button{border:0;color:var(--scol);inline-size:3em;font-size:.8em;transition:0.1s}
 button:hover,button:focus{outline:var(--accent)solid 5px}
 button:active{background-color:var(--scol);color:var(--pcol)}
-::selection{color:var(--pcol);background:var(--accent)}
 canvas,.pixelart{image-rendering:pixelated}
 button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1,.showcase,div.content,.palette,div.card,a,#img0bg,.tabl{border-radius:9px}
 h1,h2,#caption,.color,.center,.tag{text-align:center}
@@ -25,7 +25,7 @@ pre{font-size:1.5em}
 div.base{margin:2em auto;width:70vmax}
 div.content{background:radial-gradient(at 50%0,var(--pcol),var(--tcol));backdrop-filter:blur(5px);padding:.8rem;border:solid var(--scol);border-width:10px 0}
 .showcase{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;justify-content:space-evenly;gap:1em 1em;padding:.8em}
-.showcase img{outline:0 solid var(--accent);transition:.05s,outline-width.15s}
+.showcase img{outline:0 double var(--accent);transition:.05s,outline-width.15s}
 .showcase img:hover,.showcase img:focus,a:focus-visible{outline:.5em solid var(--accent);cursor:pointer}
 .showcase img:active{outline-offset:.5em}
 a:focus-visible{outline-width:.2rem;outline-offset:.1em}
@@ -41,8 +41,8 @@ a:focus-visible{outline-width:.2rem;outline-offset:.1em}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 .back{font-size:1.25em;display:block;margin-top:9px}
 .palette{display:flex;overflow:hidden;flex-wrap:wrap;max-width:32em}
-.color{width:4em;height:4em;flex:1 0 auto;border:0 solid var(--accent);box-sizing:border-box;transition:.1s;background:var(--pcol)}
-.color:focus,.color:hover{border-style:solid;border-width:.3em 0}.color:active{border-width:.5em 0}.color:focus-visible{outline:0}
+.color{width:4em;height:4em;flex:1 0 auto;border:0 solid;box-sizing:border-box;transition:.1s;background:var(--pcol)}
+.color:focus,.color:hover{border-width:.3em 0}.color:active{border-width:.5em 0}.color:focus-visible{outline:0}
 .long{width:32em;flex:2 1}
 input[type=range]{accent-color:var(--accent);cursor:pointer}
 code{font-family:Monospace}
@@ -59,11 +59,11 @@ div.card{background:var(--tcol);padding:.5rem}
 .tag img:active{outline-offset:0}
 .tabl{padding:9px;background:var(--tcol);display:flex;justify-content:space-evenly;align-content:space-between;flex-wrap:wrap}
 .tabl *{text-align:center;flex:1 30%}
-.tabl b{background:var(--tcol);border-radius:9px;padding:8px;display:block;border:solid var(--scol);border-width:.2em 0}
+.tabl b{background:var(--tcol);border-radius:9px;padding:8px;display:block;border:solid var(--scol);border-width:.3em 0}
 .spoiler{color:#0000;background:var(--scol);animation:.2s;overflow:auto;display:inline;user-select:none}
 .spoiler:hover{color:inherit;background:#0000}
 ::-webkit-scrollbar{background:#0000}
 ::-webkit-scrollbar-track{background:#0000}
 ::-webkit-scrollbar-thumb{background:var(--tcol)}
 ::-webkit-scrollbar-thumb:hover{background:var(--pcol)}
-@media(orientation:portrait){.showcase>img,.long,.viewport{width:100%;height:auto}div.base{width:95%}body{font-size:0.8rem}div.content,#img0bg{backdrop-filter:none}.tabl *{flex:1 100%}#img0bg{width:100%}}
+@media(orientation:portrait){.showcase>img,.long,.viewport{width:100%;height:auto}div.base{width:95%}body{font-size:0.8rem}div.content,#img0bg{backdrop-filter:none;width:100%}.tabl *{flex:1 100%}}

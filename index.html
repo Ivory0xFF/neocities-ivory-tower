@@ -79,7 +79,7 @@
           var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 99);
           var renderer = new THREE.WebGLRenderer({alpha: true});
           renderer.setClearColor(0xffffff, 0);
-          renderer.setSize(window.innerWidth / 3, window.innerWidth / 3);
+          renderer.setSize(window.innerWidth / 2, window.innerWidth / 2);
           document.body.appendChild(renderer.domElement);
           renderer.domElement.style.cssText = "z-index:-1;position:fixed;top:25%;width:100%";
           var icosa = new THREE.Mesh(new THREE.IcosahedronGeometry(5, 2), new THREE.MeshNormalMaterial({wireframe: true}));
