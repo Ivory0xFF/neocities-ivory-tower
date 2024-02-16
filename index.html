@@ -23,7 +23,7 @@
 <body>
     <h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
     <div class=base>
-      <h1 class=smol style="font-size:0.8em;text-align:left;border-radius:9px 9px 0 0">
+      <h1 class=smol style="font-size:0.8em;text-align:left;border-radius:9px 9px 0 0;display:flex;justify-content:center">
         <pre> =
 ..   -=-   ---   .--.    '.-'=   -=.   --
  =    '=.  -    =    =    =       '=. -'
@@ -42,8 +42,8 @@
                 <img src=Cat.png class="center pixelart bordr" style=height:12em;width:auto;transform:rotate(2deg);display:inline-block>
                 <p style=word-spacing:100vw;width:min-content;display:inline-block>I make STUFF</p>
                 <hr>
-                <div style="display:flex;gap:0 2em">
-                <pre> ▓    ▓
+                <div style="display:flex;gap:0 1.5em;align-items:end;justify-content:center">
+                  <pre> ▓    ▓
 ▓ ▓  ▓ ▓
 
   ▓  ▓
@@ -51,12 +51,12 @@
 ▓      ▓
  ▓ ▓▓ ▓
 ▓      ▓</pre>
-                <pre>░░██░
+                 <pre>░░██░
 █░░░█
 ░░░█░
 █░░░█
 ░░██░</pre>
-                <pre > /|
+                  <pre > /|
 {' _ }7
  │ ╭ ╲ ╭╮
  ╰┴╰──╯╯</pre>
@@ -86,8 +86,8 @@
           camera.position.z = 12;
           function render() {
               requestAnimationFrame(render);
-              icosa.rotation.y += .01 / 16;
-              icosa.rotation.z += .02 / 16;
+              icosa.rotation.y += .01 / 32;
+              icosa.rotation.z += .02 / 32;
               renderer.render(scene, camera);
           };
           render();
