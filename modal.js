@@ -1,7 +1,6 @@
 let modal = document.getElementById("modal");
 let img = document.getElementById("img0");
 let caption = document.getElementById("caption");
-let x = document.getElementById("close");
 let imgs = document.querySelectorAll(".showcase img");
 
 for (var i = 0; i < imgs.length; i++) {
@@ -11,7 +10,7 @@ for (var i = 0; i < imgs.length; i++) {
         img.src = c.src;
         caption.innerText = c.alt;
         modal.style.display = "flex";
-        (c.classList.contains("pixelart")) ? img.className = "pixelart" : img.className = "";    
+        (c.parentElement.classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = "";    
     };
     c.addEventListener("keydown", function onEvent(k) {
         if (k.key === "Enter") {
@@ -20,11 +19,12 @@ for (var i = 0; i < imgs.length; i++) {
     });
 }
 
-x.onclick = function () {
+modal.onclick = function () {
     modal.style.display = "none";
 };
-x.onkeydown = function (k) {
-    if (k.key == "Enter") {
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
         modal.style.display = "none";
     }
-};
+});
