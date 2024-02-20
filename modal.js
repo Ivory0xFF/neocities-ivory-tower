@@ -8,7 +8,7 @@ for (var i = 0; i < imgs.length; i++) {
     c.tabIndex = "0";
     c.onclick = function () {
         img.src = c.src;
-        caption.innerText = c.alt;
+        caption.innerHTML = c.alt;
         modal.style.display = "flex";
         (c.parentElement.classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = "";    
     };
