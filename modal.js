@@ -10,7 +10,7 @@ for (var i = 0; i < imgs.length; i++) {
         img.src = c.src;
         caption.innerHTML = c.alt;
         modal.style.display = "flex";
-        (c.parentElement.classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = "";    
+        (c.parentElement.classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = ""; 
     };
     c.addEventListener("keydown", function onEvent(k) {
         if (k.key === "Enter") {
