@@ -14,7 +14,7 @@ h1{background:var(--scol);color:var(--pcol);font-size:2em}
 h1,h2{padding:5px;font-family:'MuseoModerno'}
 hr{border:solid var(--scol);padding:2px;border-width:3px 8px}
 p{font-size:1em;padding:5px;border-radius:5px}
-img{width:16em}
+img{width:16em;height:auto}
 a{color:var(--accent);text-decoration-style:dashed}
 a:hover,a:focus-visible{text-decoration-style:solid}
 button{border:0;color:var(--scol);inline-size:3em;font-size:.8em;transition:0.1s}
