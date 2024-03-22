@@ -34,8 +34,8 @@ button,.showcase,p{background:var(--tcol)}
 .spoiler,#close,.color{cursor:pointer}
 
 /* general classes */
-div.base{margin:2em auto;width:70%}
-div.content{background:linear-gradient(90deg,var(--tcol),var(--pcol),var(--tcol));padding:12px;border:solid var(--scol);border-width:9px 0}
+div.base{margin:2em auto;width:70%;position:relative}
+div.content{background:linear-gradient(90deg,var(--tcol),var(--pcol),var(--tcol));padding:12px;border:solid var(--scol);border-width:9px 0;box-sizing:border-box}
 .bordr{border:.4em solid var(--scol)}
 .center{display:block}
 .back{font-size:1.25em;display:block;margin-top:9px}
@@ -80,4 +80,4 @@ div.card{background:var(--tcol);padding:.5rem}
 .card h2{text-align:left;background:var(--tcol);margin:0}
 
 /* mobile support */
-@media(orientation:portrait){.showcase>img,.viewport{flex:100%}div.base{width:95%;margin:0}div.content,#img0bg{width:100%}.tabl *{flex:1 100%}}
+@media(orientation:portrait){.showcase>img,.viewport{flex:100%}div.base{width:95vmin;margin:auto}div.content,#img0bg{width:100%}.tabl *{flex:1 100%}}

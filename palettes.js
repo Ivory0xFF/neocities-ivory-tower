@@ -21,7 +21,7 @@ window.onload = function () {
             // Make it selectable with the tab key
             bloc.tabIndex = "0";
             // Select the entire hexcode on click
-            bloc.onclick ="window.getSelection().setBaseAndExtent(this,0,this,1)";
+            bloc.setAttribute("onclick", "window.getSelection().setBaseAndExtent(this,0,this,1)");
             p[i].append(bloc);
             // Fragment things into 3 2 character long parts
             var m = cols[a].match(/.{2}/g);
