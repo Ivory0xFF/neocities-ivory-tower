@@ -17,9 +17,11 @@ p{font-size:1em;padding:5px;border-radius:5px}
 img{width:16em;height:auto}
 a{color:var(--accent);text-decoration-style:dashed}
 a:hover,a:focus-visible{text-decoration-style:solid}
-button{border:0;color:var(--scol);inline-size:3em;font-size:.8em;transition:0.1s}
-button:hover,button:focus{outline:var(--accent)solid 5px}
-button:active{background-color:var(--scol);color:var(--pcol)}
+a:focus-visible{outline:var(--accent) solid 5px}
+button{user-select:none;box-sizing:border-box;border:solid var(--scol);border-width:0 0 6px;color:var(--scol);display:block;transition:.05s;font-size:1.25em}
+button:hover,button:focus{border-width:2px 0 4px}
+button:focus{outline:var(--accent)solid 3px}
+button:active{border-width:6px 0 0}
 pre{font:1.5em andale mono, monospace}
 input[type=range]{accent-color:var(--accent);cursor:pointer}
 code{font-family:Monospace}
@@ -30,7 +32,7 @@ canvas,.pixelart{image-rendering:pixelated}
 button,img,.showcase canvas,.neon,.neonu,.card h2,hr,h1,.showcase,div.content,.palette,div.card,a,#img0bg,.tabl{border-radius:9px}
 h1,h2,#caption,.color,.center,.tag{text-align:center}
 button,.showcase,p{background:var(--tcol)}
-.img0,.back,.modal,.center,.smol{margin:auto}
+.img0,.modal,.center,.smol{margin:auto}
 .spoiler,#close,.color{cursor:pointer}
 
 /* general classes */
@@ -38,7 +40,7 @@ div.base{margin:2em auto;width:70%;position:relative}
 div.content{background:linear-gradient(90deg,var(--tcol),var(--pcol),var(--tcol));padding:12px;border:solid var(--scol);border-width:9px 0;box-sizing:border-box}
 .bordr{border:.4em solid var(--scol)}
 .center{display:block}
-.back{font-size:1.25em;display:block;margin-top:9px}
+.back{font-size:1.5em;margin:9px auto}
 .neon,.neonw{color:var(--pcol);font-size:2em;text-shadow:var(--pcol)0 0 6px;box-shadow:var(--pcol)0 0 8px;background:var(--scol);border:var(--pcol) .15rem solid;text-decoration:none;padding:.1rem;transition:.05s}
 .neon:hover,.neonw:hover{text-shadow:0 0 10px;box-shadow:0 0 20px}.neon:active,.neonw:active{text-shadow:0 0 9px;box-shadow:0 0 16px}
 .neon{text-orientation:upright;writing-mode:vertical-rl;padding:6px 0 4px}
@@ -51,15 +53,16 @@ div.content{background:linear-gradient(90deg,var(--tcol),var(--pcol),var(--tcol)
 /* portfolio stuff */
 .showcase{display:flex;flex-wrap:wrap;justify-content:start;gap:1em 1em;padding:.8em}
 .showcase img{outline:0 double var(--accent);transition:.05s,outline-width.15s;object-fit:cover}
-.showcase img:hover,.showcase img:focus,a:focus-visible{outline:.5em solid var(--accent);cursor:pointer}
+.showcase img:hover,.showcase img:focus{outline:.5em solid var(--accent);cursor:pointer}
 .showcase img:active{outline-offset:.5em}
 .viewport{height:auto;display:block}
 .viewport canvas{width:100%}
 .showcase img,.viewport{flex: 1 0 25%}
-#modal{display:none;z-index:9;height:100%;width:100%;position:fixed;top:0;background:#00111180;overflow:scroll;animation:fade .5s}
-#img0bg{width:80vmin;background:var(--tcol);padding:9px 0;animation:zoom .5s, fade .5s}
+#modal{display:none;z-index:9;height:100%;width:100%;position:fixed;top:0;background:#011d;overflow:scroll;animation:fade .5s}
+#img0bg{width:clamp(75vmin,0vmax,150vmin);background:#35b09133;padding:9px 0;animation:zoom .5s, fade .5s}
 #img0{width:100%;border-radius:0;object-fit:cover}
-#caption{font-size:2em;color:var(--accent);margin:.5em;backdrop-filter:blur(5px)}
+#caption{font-size:1.5em;color:var(--scol);margin:.5em;backdrop-filter:blur(5px);text-shadow:var(--accent)0 3px}
+#caption a{text-shadow:var(--scol)0 3px}
 @keyframes zoom{from{transform:scale(0.1)}to{transform:scale(1)}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 
