@@ -12,7 +12,7 @@ for (var i = 0; i < imgs.length; i++) {
         caption.innerHTML = c.alt;
         modal.style.display = "flex";
         window.location.hash = c.id;
-        (c.parentElement.classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = ""; 
+        (c.closest(".showcase").classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = ""; 
     };
     if ("#" + c.id == window.location.hash) {
         c.click();
@@ -24,8 +24,10 @@ for (var i = 0; i < imgs.length; i++) {
     });
 }
 
-modal.onclick = function () {
-    modal.style.display = "none";
+modal.onclick = function(event) {
+    if (!event.target.closest("#img0bg")) {
+        modal.style.display = "none";
+    }
 };
 
 document.addEventListener('keydown', e => {
