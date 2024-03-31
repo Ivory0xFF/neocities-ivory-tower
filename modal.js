@@ -6,7 +6,6 @@ let imgs = document.querySelectorAll(".showcase img");
 for (var i = 0; i < imgs.length; i++) {
     let c = imgs[i];
     c.tabIndex = "0";
-    c.loading = "lazy";
     c.id = c.alt.split(",")[0].replace(/ |, /g, "-");
     c.onclick = function () {
         img.src = c.src;

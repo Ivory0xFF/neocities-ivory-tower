@@ -59,7 +59,7 @@ div.content{background:linear-gradient(90deg,var(--tcol),var(--pcol),var(--tcol)
 .viewport canvas{width:100%}
 .showcase img,.viewport{flex: 1 0 25%}
 #modal{display:none;z-index:9;height:100%;width:100%;position:fixed;top:0;background:#011d;overflow:scroll;animation:fade .5s}
-#img0bg{width:clamp(75vmin,0vmax,150vmin);background:#35b09133;padding:9px 0;animation:zoom .5s, fade .5s}
+#img0bg{width:clamp(75vmin,0,150vmin);background:#35b09133;padding:9px 0;animation:zoom .5s, fade .5s}
 #img0{width:100%;border-radius:0;object-fit:cover}
 #caption{font-size:1.5em;color:var(--scol);margin:.5em;backdrop-filter:blur(5px);text-shadow:var(--accent)0 3px}
 #caption a{text-shadow:var(--scol)0 3px}
