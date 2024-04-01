@@ -26,12 +26,28 @@ for (var i = 0; i < imgs.length; i++) {
 
 modal.onclick = function(event) {
     if (!event.target.closest("#img0bg")) {
-        modal.style.display = "none";
+        h();
     }
 };
 
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-        modal.style.display = "none";
+window.addEventListener('hashchange', function(){
+    let hash = window.location.hash;
+    if (hash) {
+        let query = document.querySelector(hash);
+        if (query.tagName == "IMG") {
+            query.click();
+        }
+    } else {
+        h();
     }
 });
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        h();
+    }
+});
+
+function h() { // Hide
+    modal.style.display = "none";
+}
