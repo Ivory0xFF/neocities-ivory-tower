@@ -29,4 +29,3 @@ function create_viewport(mesh, col) {
     render();
 }
 create_viewport("Banan", 0xbbccff);
-create_viewport("BobaTea", 0x5b224e);

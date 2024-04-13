@@ -10,27 +10,22 @@ for (var i = 0; i < imgs.length; i++) {
     c.onclick = function () {
         img.src = c.src;
         caption.innerHTML = c.alt;
+        modal.style.animation = "";
         modal.style.display = "flex";
-        window.location.hash = c.id;
+        location.hash = c.id;
         (c.closest(".showcase").classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = ""; 
     };
     if ("#" + c.id == window.location.hash) {
         c.click();
     }
-    c.addEventListener("keydown", function onEvent(k) {
-        if (k.key === "Enter") {
+    c.addEventListener("keydown", k => {
+        if (k.key == "Enter") {
             c.click();
         }
     });
 }
 
-modal.onclick = function(event) {
-    if (!event.target.closest("#img0bg")) {
-        h();
-    }
-};
-
-window.addEventListener('hashchange', function(){
+window.addEventListener('hashchange', evt => {
     let hash = window.location.hash;
     if (hash) {
         let query = document.querySelector(hash);
@@ -38,16 +33,28 @@ window.addEventListener('hashchange', function(){
             query.click();
         }
     } else {
+        modal.style.display = "none";
+    }
+});
+
+modal.onclick = evt => {
+    if (!evt.target.closest("#img0bg")) {
+        h();
+    }
+};
+
+window.addEventListener("keydown", evt => {
+    if (evt.key == "Escape") {
         h();
     }
 });
 
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-        h();
+modal.addEventListener("animationend", evt => {
+    if (evt.animationName == "hide") {
+        modal.style.display = "none";
     }
 });
 
 function h() { // Hide
-    modal.style.display = "none";
+    modal.style.animation = "hide .3s forwards";
 }
