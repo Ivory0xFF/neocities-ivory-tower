@@ -56,5 +56,5 @@ modal.addEventListener("animationend", evt => {
 });
 
 function h() { // Hide
-    modal.style.animation = "hide .3s forwards";
+    modal.style.animation = "hide .2s forwards";
 }
