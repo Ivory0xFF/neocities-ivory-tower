@@ -77,7 +77,8 @@ input[type=range] {
     cursor: pointer;
 }
 code {
-    font-family: Monospace;
+    font-family: Consolas;
+    padding:0 6px
 }
 a:focus-visible {
     outline-offset: 4px;
@@ -85,9 +86,9 @@ a:focus-visible {
 
 /* section dedicated to elements and classes with the same rules (grouping them together saves up space MOST of the time) */
 .pixelart, canvas {
-    image-rendering: pixelated;
+    image-rendering: pixelated
 }
-#img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.content, h1, hr, img {
+#img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.content, h1, hr, img, code {
     border-radius: 9px;
 }
 #caption, .center, .color, .tag, h1, h2 {
@@ -107,6 +108,9 @@ a:focus-visible {
 }
 .spoiler:focus-visible, a:focus-visible, button:focus-visible {
     outline: var(--accent)solid 4px;
+}
+.color, code{
+    background: var(--pcol)
 }
 
 /* general classes */
@@ -282,8 +286,7 @@ div.content {
     flex: 1 0 auto;
     border: 0 solid;
     box-sizing: border-box;
-    transition: 0.1s;
-    background: var(--pcol);
+    transition: 0.1s
 }
 .color:focus, .color:hover {
     border-width: 0.3em 0;
