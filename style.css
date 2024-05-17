@@ -86,7 +86,7 @@ a:focus-visible {
 
 /* section dedicated to elements and classes with the same rules (grouping them together saves up space MOST of the time) */
 .pixelart, canvas {
-    image-rendering: pixelated
+    image-rendering: pixelated;
 }
 #img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.content, h1, hr, img, code {
     border-radius: 9px;
