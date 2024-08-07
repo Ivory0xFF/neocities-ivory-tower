@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <title>Boids</title>
-    <link href=style.css rel=stylesheet>
-    <link rel=icon type=image/ico href=Cat.png id=fav>
+		<meta charset=UTF-8>
+		<meta name=viewport content="width=device-width,initial-scale=1">
+		<title>Boids</title>
+		<link href=style.css rel=stylesheet>
+		<link rel=icon type=image/ico href=Cat.png id=fav>
 </head>
 <body>
-    <!-- Rust stuff -->
-    <script type="module">
-        import init, {start} from "./boids/pkg/boids.js";
-        init().then(()=>{start();});
-    </script>
-    <!-- WebGPU stuff -->
-    <script type=module>
-    async function main() {
-      const adapter = await navigator.gpu.requestAdapter();
-      const device = await adapter.requestDevice();
-      if (!device) {
-        console.log("need a browser that supports WebGPU");
-        return;
-      }
-    }
-    main();
-    </script>
-    <div class=base>
-        <div class=content>
-            <canvas id=boids></canvas>
-        </div>
-    </div>
+		<!-- Rust stuff -->
+		<script type="module">
+				import init, {start} from "./boids/pkg/boids.js";
+				init().then(()=>{start();});
+		</script>
+		<!-- WebGPU stuff -->
+		<script type=module>
+		async function main() {
+			const adapter = await navigator.gpu.requestAdapter();
+			const device = await adapter.requestDevice();
+			if (!device) {
+				console.log("need a browser that supports WebGPU");
+				return;
+			}
+		}
+		main();
+		</script>
+		<div class=base>
+				<div class=content>
+						<canvas id=boids></canvas>
+				</div>
+		</div>
 </body>
 </html>

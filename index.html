@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <meta property=og:image content=ass/The.png>
-    <meta property=og:title content="Hello B)">
-    <meta property=og:description content="This is me site!! You can find things I've made here">
-    <meta property=description content="This is me site!! You can find things I've made here">
-    <meta property=og:url content=https://ivory-tower.neocities.org/>
-    <title>Me site</title>
-    <link href=style.css rel=stylesheet>
-    <link href=Cat.png rel=icon>
-    <script src=fav.js></script>
-    <script type=importmap>
-    {
-      "imports":
-        {
-            "three":"https://unpkg.com/three@0.156.0/build/three.module.min.js"
-        }
-    }
-    </script>
+		<meta charset=UTF-8>
+		<meta name=viewport content="width=device-width,initial-scale=1">
+		<meta property=og:image content=ass/The.png>
+		<meta property=og:title content="Hello B)">
+		<meta property=og:description content="This is me site!! You can find things I've made here">
+		<meta property=description content="This is me site!! You can find things I've made here">
+		<meta property=og:url content=https://ivory-tower.neocities.org/>
+		<title>Me site</title>
+		<link href=style.css rel=stylesheet>
+		<link href=Cat.png rel=icon>
+		<script src=fav.js></script>
+		<script type=importmap>
+		{
+			"imports":
+				{
+						"three":"https://unpkg.com/three@0.156.0/build/three.module.min.js",
+						 "three/addons/":"https://unpkg.com/three@0.156.0/examples/jsm/"
+				}
+		}
+		</script>
 </head>
 <body>
-    <h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
-    <div class=base>
-      <h2 class=smol style="font-size:.7em;text-align:left;border-radius:9px 9px 0 0;display:flex;justify-content:center;margin-top:9%;background:var(--scol);color:var(--pcol)">
-        <pre> =
+		<h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
+		<div class=base>
+			<h2 class=smol style="font-size:.7em;text-align:left;border-radius:9px 9px 0 0;display:flex;justify-content:center;margin-top:9%;background:var(--scol);color:var(--pcol)">
+				<pre> =
 ..   -=-   ---   .--.    '.-'=   -=.   --
  =    '=.  -    =    =    =       '=. -'
  =     '=.-     =    =    =        '='
@@ -37,15 +38,15 @@
  = .   =    =   '=.'=  -    =        =
  '-'    '--'     '=- -=      '--'   .=.</pre>
  </h2>
-        <div style=display:flex;align-items:flex-start>
-          <div class="content smol">
-            <div class=center style=width:75%>
-              <p style="writing-mode:sideways-lr;display:inline">I make STUFF</p>
-              <img src=ass/copper.webp width=2048 height=4096 class=bordr style=width:16em;transform:rotate(2deg);display:inline-block>
-            </div>
-            <hr>
-            <div style="display:flex;gap:0 1.5em;align-items:end;justify-content:center">
-            <pre> ▓    ▓
+				<div style=display:flex;align-items:flex-start>
+					<div class="content smol">
+						<div class=center style=width:75%>
+							<p style="writing-mode:sideways-lr;display:inline">I make STUFF</p>
+							<img src=ass/copper.webp width=2048 height=4096 class=bordr style=width:16em;transform:rotate(2deg);display:inline-block>
+						</div>
+						<hr>
+						<div style="display:flex;gap:0 1.5em;align-items:end;justify-content:center">
+						<pre> ▓    ▓
 ▓ ▓  ▓ ▓
 
   ▓  ▓
@@ -53,47 +54,57 @@
 ▓      ▓
  ▓ ▓▓ ▓
 ▓      ▓</pre>
-            <pre>░░██░
+						<pre>░░██░
 █░░░█
 ░░░█░
 █░░░█
 ░░██░</pre>
-            <pre > /|
+						<pre > /|
 {' _ }7
  │ ╭ ╲ ╭╮
  ╰┴╰──╯╯</pre>
-            </div>
-          </div>
-        </div>
-        <div class="flex smol" style=align-items:flex-start>
-            <a class=neon href=portfolio.html>PORTFOLIO</a>
-            <a class=neon href=about.html>ABOUT</a>
-            <a class=neon href=tools.html>TOOLS</a>
-            <a class=neon href=https://ivory0xff.itch.io>Itch</a>
-            <a class=neon href=https://github.com/Ivory0xFF/neocities-ivory-tower>Github</a>
-            <a class=neon href=blog>BLOG</a>
-            <a class=neon href=http://hyprd.mn/user/55010>Hyprdmn</a>
-        </div>
-        <script type=module>
-          import * as THREE from "three";
-          var scene = new THREE.Scene();
-          var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 99);
-          var renderer = new THREE.WebGLRenderer({alpha: true});
-          renderer.setClearColor(0xffffff, 0);
-          renderer.setSize(window.innerWidth / 2, window.innerWidth / 2);
-          document.body.appendChild(renderer.domElement);
-          renderer.domElement.style.cssText = "z-index:-1;position:fixed;top:25%;width:100%";
-          var icosa = new THREE.Mesh(new THREE.IcosahedronGeometry(5, 2), new THREE.MeshNormalMaterial({wireframe: true}));
-          scene.add(icosa);
-          camera.position.z = 12;
-          function render() {
-              requestAnimationFrame(render);
-              icosa.rotation.y += .01 / 32;
-              icosa.rotation.z += .02 / 32;
-              renderer.render(scene, camera);
-          };
-          render();
-        </script>
-    </div>
+						</div>
+					</div>
+				</div>
+				<div class="flex smol" style=align-items:flex-start>
+						<a class=neon href=portfolio.html>PORTFOLIO</a>
+						<a class=neon href=about.html>ABOUT</a>
+						<a class=neon href=tools.html>TOOLS</a>
+						<a class=neon href=https://ivory0xff.itch.io>Itch</a>
+						<a class=neon href=https://github.com/Ivory0xFF/neocities-ivory-tower>Github</a>
+						<a class=neon href=blog>BLOG</a>
+						<a class=neon href=http://hyprd.mn/user/55010>Hyprdmn</a>
+						<a class=neon href=index.xml style=font-size:1em>RSS</a>
+				</div>
+				<script type=module>
+					import * as THREE from "three";
+					import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
+					const gltfloader = new GLTFLoader();
+					var scene = new THREE.Scene();
+					var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 99);
+					var renderer = new THREE.WebGLRenderer({alpha: true});
+					renderer.setClearColor(0xffffff, 0);
+					renderer.setSize(window.innerWidth / 2, window.innerWidth / 2);
+					document.body.appendChild(renderer.domElement);
+					renderer.domElement.style.cssText = "z-index:-1;position:absolute;top:50%;width:100%";
+					let model
+					gltfloader.load("/ass/Banan.gltf", function (gltf) {
+						model = gltf.scene
+						scene.add(model);
+						model.traverse((o) => {
+							if (o.isMesh) o.material = new THREE.MeshNormalMaterial({wireframe: true});
+						});
+					})
+					camera.position.z = 4;
+					function render() {
+							requestAnimationFrame(render);
+							console.log(model)
+							model.rotation.y += .01 / 16;
+							// model.rotation.z += .02 / 32;
+							renderer.render(scene, camera);
+					};
+					render();
+				</script>
+		</div>
 </body>
 </html>

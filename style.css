@@ -3,15 +3,29 @@
 
 /* general styling */
 :root {
-    --accent: #b71c4a;
-    --pcol: #35b091;
-    --scol: #033445;
-    --tcol: #35b09180;
+		--accent: #b71c4a;
+		--pcol: #35b091;
+		--scol: #033445;
+		--tcol: #35b09180;
 }
+/* dark theme */
+/*:root {
+		--accent: #802;
+		--pcol: #625;
+		--scol: #202;
+		--tcol: #b692;
+}*/
+/*
+:root {
+		--accent: #c44;
+		--pcol: #646;  548
+		--scol: #002;
+		--tcol: #8791; ecf2
+}*/
 * {
-    scrollbar-color: var(--accent)#0000;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+		scrollbar-color: var(--accent)#0000;
+		scroll-behavior: smooth;
+		scrollbar-width: none;
 }
 ::-webkit-scrollbar {background: #0000}
 ::-webkit-scrollbar-track {background: #0000}
@@ -19,341 +33,342 @@
 ::-webkit-scrollbar-thumb:hover {background: var(--pcol)}
 ::selection {color: var(--pcol); background: var(--accent)}
 body {
-    background: #440020;
-    color: var(--scol);
-    font-family: Comfortaa,Verdana;
-    margin: 0;
+		background: #440020;
+		/* background: #000; */
+		color: var(--scol);
+		font-family: Comfortaa,Verdana;
+		margin: 0;
 }
 h1 {
-    background: var(--scol);
-    color: var(--pcol);
-    font-size: 2em;
+		background: var(--scol);
+		color: var(--pcol);
+		font-size: 2em;
 }
 h1, h2 {
-    padding: 5px;
-    font-family: 'MuseoModerno';
+		padding: 5px;
+		font-family: 'MuseoModerno';
 }
 hr {
-    border: solid var(--scol);
-    padding: 2px;
-    border-width: 3px 8px;
+		border: solid var(--scol);
+		padding: 2px;
+		border-width: 3px 8px;
 }
 p {
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 5px;
+		font-size: 1em;
+		padding: 5px;
+		border-radius: 5px;
 }
 img {
-    width: clamp(1em, 16em, 100%);
-    height: auto;
+		width: clamp(1em, 16em, 100%);
+		height: auto;
 }
 a {
-    color: var(--accent);
-    text-decoration-style: dashed;
+		color: var(--accent);
+		text-decoration-style: dashed;
 }
 a:focus-visible, a:hover {
-    text-decoration-style: solid;
+		text-decoration-style: solid;
 }
 button {
-    box-sizing: border-box;
-    border: solid var(--scol);
-    border-width: 0 0 6px;
-    color: var(--scol);
-    display: block;
-    transition: 0.05s;
-    font-size: 1.25em;
+		box-sizing: border-box;
+		border: solid var(--scol);
+		border-width: 0 0 6px;
+		color: var(--scol);
+		display: block;
+		transition: 0.05s;
+		font-size: 1.25em;
 }
 button:focus, button:hover {
-    border-width: 2px 0 4px;
+		border-width: 2px 0 4px;
 }
 button:active {
-    border-width: 6px 0 0;
+		border-width: 6px 0 0;
 }
 pre {
-    font: 1.5em AndaleMono, monospace;
+		font: 1.5em AndaleMono, monospace;
 }
 input[type=range] {
-    accent-color: var(--accent);
-    cursor: pointer;
+		accent-color: var(--accent);
+		cursor: pointer;
 }
 code {
-    font-family: Consolas;
-    padding:0 6px
+		font-family: Consolas;
+		padding:0 6px
 }
 a:focus-visible {
-    outline-offset: 4px;
+		outline-offset: 4px;
 }
 
 /* section dedicated to elements and classes with the same rules (grouping them together saves up space MOST of the time) */
 .pixelart, canvas {
-    image-rendering: pixelated;
+		image-rendering: pixelated;
 }
 #img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.content, h1, hr, img, code {
-    border-radius: 9px;
+		border-radius: 9px;
 }
 #caption, .center, .color, .tag, h1, h2 {
-    text-align: center;
+		text-align: center;
 }
 .showcase, button, p {
-    background: var(--tcol);
+		background: var(--tcol);
 }
 .center, .img0, .modal, .smol {
-    margin: auto;
+		margin: auto;
 }
 #close, .color, .spoiler {
-    cursor: pointer;
+		cursor: pointer;
 }
 #img0, .spoiler, button {
-    user-select: none;
+		user-select: none;
 }
 .spoiler:focus-visible, a:focus-visible, button:focus-visible {
-    outline: var(--accent)solid 4px;
+		outline: var(--accent)solid 4px;
 }
 .color, code{
-    background: var(--pcol)
+		background: var(--pcol)
 }
 
 /* general classes */
 div.base {
-    margin: 2em auto;
-    width: 70%;
-    position: relative;
+		margin: 2em auto;
+		width: 70%;
+		position: relative;
 }
 div.content {
-    background: linear-gradient(90deg, var(--tcol), var(--pcol), var(--tcol));
-    padding: 12px;
-    border: solid var(--scol);
-    border-width: 9px 0;
-    box-sizing: border-box;
-    overflow: hidden;
+		background: linear-gradient(90deg, var(--tcol), var(--pcol), var(--tcol));
+		padding: 12px;
+		border: solid var(--scol);
+		border-width: 9px 0;
+		box-sizing: border-box;
+		overflow: hidden;
 }
 .bordr {
-    border: 0.4em solid var(--scol);
+		border: 0.5em solid var(--scol);
 }
 .center {
-    display: block;
+		display: block;
 }
 .back {
-    font-size: 1.5em;
-    margin: 9px auto auto;
+		font-size: 1.5em;
+		margin: 9px auto auto;
 }
 .neon, .neonw {
-    color: var(--pcol);
-    font-size: 2em;
-    text-shadow: var(--pcol) 0 0 6px;
-    box-shadow: var(--pcol) 0 0 8px;
-    background: var(--scol);
-    border: var(--pcol) 0.15rem solid;
-    text-decoration: none;
-    padding: 0.1rem;
-    transition: 0.05s;
+		color: var(--pcol);
+		font-size: 2em;
+		text-shadow: var(--pcol) 0 0 6px;
+		box-shadow: var(--pcol) 0 0 8px;
+		background: var(--scol);
+		border: var(--pcol) 0.15rem solid;
+		text-decoration: none;
+		padding: 0.1rem;
+		transition: 0.05s;
 }
 .neon:hover, .neonw:hover {
-    text-shadow: 0 0 10px;
-    box-shadow: 0 0 20px;
+		text-shadow: 0 0 10px;
+		box-shadow: 0 0 20px;
 }
 .neon:active, .neonw:active {
-    text-shadow: 0 0 9px;
-    box-shadow: 0 0 16px;
+		text-shadow: 0 0 9px;
+		box-shadow: 0 0 16px;
 }
 .neon {
-    text-orientation: upright;
-    writing-mode: vertical-rl;
-    padding: 6px 0 4px;
+		text-orientation: upright;
+		writing-mode: vertical-rl;
+		padding: 6px 0 4px;
 }
 .neonw {
-    padding: 4px 8px;
+		padding: 4px 8px;
 }
 .smol {
-    width: clamp(35ch, 95%, 60ch);
+		width: clamp(35ch, 95%, 60ch);
 }
 .spoiler {
-    background: var(--scol);
-    transition: 0.4s;
-    display: inline;
-    background: var((--scol));
+		background: var(--scol);
+		transition: 0.4s;
+		display: inline;
+		background: var((--scol));
 }
 .spoiler * {
-    opacity: 0;
-    transition: 0.2s;
+		opacity: 0;
+		transition: 0.2s;
 }
 .spoiler:focus *, .spoiler:hover * {
-    opacity: 1;
+		opacity: 1;
 }
 .spoiler:focus, .spoiler:hover {
-    background: #0000;
+		background: #0000;
 }
 /* .showcase .spoiler:has(img){} */
 .flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em 1em;
-    justify-content: space-around;
-    padding: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1em 1em;
+		justify-content: space-around;
+		padding: 5px;
 }
 
 /* portfolio stuff */
 .showcase {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    gap: 0.5em 0.5em;
-    padding: 1em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: start;
+		gap: 0.5em 0.5em;
+		padding: 1em;
 }
 .showcase img {
-    outline: 0 double var(--accent);
-    transition: .15s, opacity .5s;
-    object-fit: cover;
-    width: 20%;
-    box-sizing: border-box;
+		outline: 0 double var(--accent);
+		transition: .15s, opacity .5s;
+		object-fit: cover;
+		width: 20%;
+		box-sizing: border-box;
 }
 .showcase img:focus, .showcase img:hover {
-    outline: 0.5em solid var(--accent);
-    cursor: pointer;
+		outline: 0.5em solid var(--accent);
+		cursor: pointer;
 }
 .showcase img:active {
-    outline-offset: 0.5em;
+		outline-offset: 0.5em;
 }
 .viewport {
-    height: auto;
-    display: block;
+		height: auto;
+		display: block;
 }
 .viewport canvas {
-    width: 100%;
+		width: 100%;
 }
 .showcase img, .viewport {
-    flex: 1 0 24%;
+		flex: 1 0 24%;
 }
 #modal {
-    display: none;
-    z-index: 9;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background: #011e;
-    overflow: scroll;
-    animation: show 0.5s;
+		display: none;
+		z-index: 9;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		background: #011e;
+		overflow: scroll;
+		animation: show 0.5s;
 }
 #img0bg {
-    width: auto;
-    height: 100vh;
-    background: #35b09133;
-    border: solid #46c1a244;
-    border-width: 9px 0;
-    animation: zoom 0.5s;
-    box-sizing: border-box;
+		width: auto;
+		height: 100vh;
+		background: #35b09133;
+		border: solid #46c1a244;
+		border-width: 9px 0;
+		animation: zoom 0.5s;
+		box-sizing: border-box;
 }
 #img0 {
-    height: 100%;
-    width: auto;
-    border-radius: 0;
-    object-fit: cover;
+		height: 100%;
+		width: auto;
+		border-radius: 0;
+		object-fit: cover;
 }
 #caption {
-    font-size: 1.5em;
-    color: var(--scol);
-    margin: 0.5em;
-    backdrop-filter:blur(5px);
-    text-shadow: var(--accent) 0 3px;
+		font-size: 1.5em;
+		color: var(--scol);
+		margin: 0.5em;
+		backdrop-filter:blur(5px);
+		text-shadow: var(--accent) 0 3px;
 }
 #caption a {
-    text-shadow: var(--scol) 0 3px;
+		text-shadow: var(--scol) 0 3px;
 }
 @keyframes zoom {
-    0% {transform: scale(0.1)}
-    to {transform: scale(1)}
+		0% {transform: scale(0.1)}
+		to {transform: scale(1)}
 }
 @keyframes show {
-    0% {opacity: 0}
-    to {opacity: 1}
+		0% {opacity: 0}
+		to {opacity: 1}
 }
 @keyframes hide {
-    0% {opacity: 1}
-    to {opacity: 0}
+		0% {opacity: 1}
+		to {opacity: 0}
 }
 
 /* tools stuff */
 .palette {
-    display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-    max-width: 32em;
+		display: flex;
+		overflow: hidden;
+		flex-wrap: wrap;
+		max-width: 32em;
 }
 .color {
-    width: 4em;
-    height: 4em;
-    flex: 1 0 auto;
-    border: 0 solid;
-    box-sizing: border-box;
-    transition: 0.1s
+		width: 4em;
+		height: 4em;
+		flex: 1 0 auto;
+		border: 0 solid;
+		box-sizing: border-box;
+		transition: 0.1s
 }
 .color:focus, .color:hover {
-    border-width: 0.3em 0;
+		border-width: 0.25em 0;
 }
 .color:active {
-    border-width: 0.5em 0;
+		border-width: 0.5em 0;
 }
 .color:focus-visible {
-    outline: 0;
+		outline: 0;
 }
 .tabl {
-    padding: 9px;
-    background: var(--tcol);
-    display: flex;
-    justify-content: space-evenly;
-    align-content: space-between;
-    flex-wrap: wrap;
+		padding: 9px;
+		background: var(--tcol);
+		display: flex;
+		justify-content: space-evenly;
+		align-content: space-between;
+		flex-wrap: wrap;
 }
 .tabl * {
-    text-align: center;
-    flex: 1 30%;
+		text-align: center;
+		flex: 1 30%;
 }
 .tabl b {
-    background: var(--tcol);
-    border-radius: 9px;
-    padding: 8px;
-    display: block;
-    border: solid var(--scol);
-    border-width: 0.3em 0;
+		background: var(--tcol);
+		border-radius: 9px;
+		padding: 9px;
+		display: block;
+		border: solid var(--scol);
+		border-width: 0 0.25em;
 }
 .tag {
-    display: inline-block;
-    background: #0ff3;
-    font-size: 1.2em;
-    padding: 0.2em 0.2em 0;
-    border-radius: 9px 9px 0 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
+		display: inline-block;
+		background: #0ff3;
+		font-size: 1.25em;
+		padding: 0.25em 0.25em 0;
+		border-radius: 9px 9px 0 0;
+		margin-left: 50%;
+		transform: translateX(-50%);
 }
 .tag img {
-    height: 16px;
-    width: auto;
+		height: 16px;
+		width: auto;
 }
 .tag img:active {
-    outline-offset: 0;
+		outline-offset: 0;
 }
 
 /* blog stuff */
 div.card {
-    background: var(--tcol);
-    padding: 0.5rem;
-    margin: 1em 0 0;
+		background: var(--tcol);
+		padding: 0.5rem;
+		margin: 1em 0 0;
 }
 .card p {
-    margin: 1em 0 0;
+		margin: 1em 0 0;
 }
 .card h2 {
-    text-align: left;
-    background: var(--tcol);
-    margin: 0;
+		text-align: left;
+		background: var(--tcol);
+		margin: 0;
 }
 
 /* mobile support */
 @media(orientation:portrait) {
-    .showcase > img, .viewport {flex: 100%}
-    div.base {width: 95vmin; margin: auto}
-    #img0bg, div.content {width: 100%; height:auto}
-    #img0{height: auto; width: 100%}
-    .tabl * {flex: 1 100%}
+		.showcase > img, .viewport {flex: 100%}
+		div.base {width: 95vmin; margin: auto}
+		#img0bg, div.content {width: 100%; height:auto}
+		#img0 {height: auto; width: 100%}
+		.tabl * {flex: 1 100%}
 }
