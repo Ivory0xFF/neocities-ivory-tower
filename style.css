@@ -34,9 +34,8 @@
 ::selection {color: var(--pcol); background: var(--accent)}
 body {
 	background: #440020;
-	/* background: #000; */
 	color: var(--scol);
-	font-family: Comfortaa,Verdana;
+	font-family: Comfortaa, Verdana;
 	margin: 0;
 }
 h1 {
@@ -45,7 +44,7 @@ h1 {
 	font-size: 2em;
 }
 h1, h2 {
-	padding: 5px;
+	padding: 0.5em;
 	font-family: 'MuseoModerno';
 }
 hr {
@@ -54,9 +53,9 @@ hr {
 	border-width: 3px 8px;
 }
 p {
-	font-size: 1em;
-	padding: 5px;
-	border-radius: 5px;
+	font-size: 1.2em;
+	padding: 0.5em;
+	width: clamp(0, 1.25em, 75ch);
 }
 img {
 	width: clamp(1em, 16em, 100%);
@@ -93,18 +92,27 @@ input[type=range] {
 }
 code {
 	font-family: Consolas;
-	padding:0 6px
+	padding: 0 6px;
+	color: var(--pcol);
+	background: var(--scol);
+	border: var(--scol) solid;
+	border-width: 0.125em 0;
 }
 a:focus-visible {
 	outline-offset: 4px;
+}
+small {
+	font-size: 1em;
 }
 
 /* section dedicated to elements and classes with the same rules (grouping them together saves up space MOST of the time) */
 .pixelart, canvas {
 	image-rendering: pixelated;
+	width: round(nearest, attr(width), 64px) !important;
+	height: round(nearest, attr(height), 64px) !important;
 }
-#img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.content, h1, hr, img, code {
-	border-radius: 9px;
+#img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.content, h1, hr, img, code, p {
+	border-radius: 0.5em;
 }
 #caption, .center, .color, .tag, h1, h2 {
 	text-align: center;
@@ -113,7 +121,8 @@ a:focus-visible {
 	background: var(--tcol);
 }
 .center, .img0, .modal, .smol {
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 #close, .color, .spoiler {
 	cursor: pointer;
@@ -124,9 +133,6 @@ a:focus-visible {
 .spoiler:focus-visible, a:focus-visible, button:focus-visible {
 	outline: var(--accent)solid 4px;
 }
-.color, code{
-	background: var(--pcol)
-}
 
 /* general classes */
 div.base {
@@ -135,7 +141,7 @@ div.base {
 	position: relative;
 }
 div.content {
-	background: linear-gradient(90deg, var(--tcol), var(--pcol), var(--tcol));
+	background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%);
 	padding: 12px;
 	border: solid var(--scol);
 	border-width: 9px 0;
@@ -150,9 +156,9 @@ div.content {
 }
 .back {
 	font-size: 1.5em;
-	margin: 9px auto auto;
+	margin: 1em auto auto;
 }
-.neon, .neonw {
+.neon/*, .neonw*/ {
 	color: var(--pcol);
 	font-size: 2em;
 	text-shadow: var(--pcol) 0 0 6px;
@@ -163,26 +169,26 @@ div.content {
 	padding: 0.1rem;
 	transition: 0.05s;
 }
-.neon:hover, .neonw:hover {
+.neon:hover/*, .neonw:hover*/ {
 	text-shadow: 0 0 10px;
 	box-shadow: 0 0 20px;
 }
-.neon:active, .neonw:active {
+.neon:active/*, .neonw:active*/ {
 	text-shadow: 0 0 9px;
 	box-shadow: 0 0 16px;
 }
 .neon {
 	text-orientation: upright;
 	writing-mode: vertical-rl;
-	padding: 6px 0 4px;
+	padding: 0.25em 0;
 }
-.neonw {
+/*.neonw {
 	padding: 4px 8px;
-}
+}*/
 .smol {
 	width: clamp(35ch, 95%, 60ch);
 }
-.spoiler {
+/*.spoiler {
 	background: var(--scol);
 	transition: 0.4s;
 	display: inline;
@@ -197,7 +203,7 @@ div.content {
 }
 .spoiler:focus, .spoiler:hover {
 	background: #0000;
-}
+}*/
 /* .showcase .spoiler:has(img){} */
 .flex {
 	display: flex;
@@ -241,7 +247,7 @@ div.content {
 }
 #modal {
 	display: none;
-	z-index: 9;
+	z-index: 1;
 	height: 100%;
 	width: 100%;
 	position: fixed;
@@ -254,7 +260,7 @@ div.content {
 	width: auto;
 	height: 100vh;
 	background: #35b09133;
-	border: solid #46c1a244;
+	border: solid var(--tcol);
 	border-width: 9px 0;
 	animation: zoom 0.5s;
 	box-sizing: border-box;
@@ -269,7 +275,6 @@ div.content {
 	font-size: 1.5em;
 	color: var(--scol);
 	margin: 0.5em;
-	backdrop-filter:blur(5px);
 	text-shadow: var(--accent) 0 3px;
 }
 #caption a {
@@ -301,7 +306,8 @@ div.content {
 	flex: 1 0 auto;
 	border: 0 solid;
 	box-sizing: border-box;
-	transition: 0.1s
+	transition: 0.1s;
+	background: var(--pcol);
 }
 .color:focus, .color:hover {
 	border-width: 0.25em 0;
@@ -362,6 +368,10 @@ div.card {
 	text-align: left;
 	background: var(--tcol);
 	margin: 0;
+}
+.card img {
+	width: 8em;
+	height: auto;
 }
 
 /* mobile support */
