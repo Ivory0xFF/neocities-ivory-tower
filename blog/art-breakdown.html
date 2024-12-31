@@ -3,12 +3,12 @@
 <head>
 	<meta charset=UTF-8>
 	<meta name=viewport content="width=device-width,initial-scale=1">
-	<meta property=og:image content=ass/The.png>
-	<meta property=og:title content="">
-	<meta property=og:description content="">
-	<title></title>
+	<meta property=og:image content=./ass/silly.webp>
+	<meta property=og:title content="Silly's art style breakdown">
+	<meta property=og:description content="Talking about how I made dis model">
+	<title>Silly's art style breakdown</title>
 	<link href=../style.css rel=stylesheet>
-	<link href=Cat.png rel=icon>
+	<link href=./Cat.png rel=icon>
 </head>
 <body>
 	<div class=base>
@@ -17,7 +17,15 @@
 			<h1>Silly's art style breakdown</h1>
 			<h2>History and inspiration</h2>
 			<p>
-				&emsp;On the 9th of December 2023 I found <a href=https://sketchfab.com/3d-models/pizza-tower-low-poly-366dd3149c3f484bb633a2533c939a48>this pizza tower model pack</a> and studied it for a while. I think the way VibaPop used textures and uv unwrapping to do flat colors is cool and in april 2024 I made <a href=../portfolio.html#copper>copper</a> in a similar style (toon shaded and without outlines though). I had seen other model packs using the same technique but I think this pizza tower one left the biggest impact on me. During the summer I found a <a href=https://youtu.be/yhGjCzxJV3E>GDC talk about guilty gear's art</a> which also showed some interesting tricks.
+				<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3357778413"><big>Link to the gmod addon!!</big></a>
+				<br><br>
+				&emsp;On the 9th of December 2023 I found <a href=https://sketchfab.com/3d-models/pizza-tower-low-poly-366dd3149c3f484bb633a2533c939a48>this pizza tower model pack</a> and studied it for a while. I think the way VibaPop used textures and uv unwrapping to do flat colors is cool and in april 2024 I made <a href=../portfolio.html#copper>copper</a> in a similar style (toon shaded and without outlines though).
+				<br><br>
+				&emsp;A limitation of models that are textured is that at high resolutions you can see the pixels of the textures. Take the first quake as an example: playing it on a 1080p monitor makes it obvious that you're in a primitive environment with few faces and limited depth. Playing it at 1/4 the resolution makes things look much better shaded and deep since you can't tell wether a pixel is dark because the quad it's on isn't facing a light or if it's because that's just what the texture looks like. This goes for devil daggers too, where I was genuinely unsure if certain details were part of the models or textures (and only found out after inspecting them in blender).
+				<br><br>
+				&emsp;An alternative is using vertex colors or combining both textures and vertex colors but I don't like the way the colors are interpolated between vertices and how that makes the tris obvious. Admittedly, using palettes as textures has its limitations too but they're limitations I can work with which is why I like this style. It's like 3d vector art just without bezier curves since it can be scaled to any resolution and looks good without having to make textures larger for big monitors.
+				<br><br>
+				&emsp;I had seen other model packs using the same technique but I think this pizza tower one left the biggest impact on me. The idea of having most details modelled instead of textured was and still is very appealing to me. It's also interesting how they shaded things- look at pillar john. You can use the model inspector in sketchfab to study its textures and wireframes. During the summer I found a <a href=https://youtu.be/yhGjCzxJV3E>GDC talk about guilty gear's art</a> which showed some interesting tricks and also mentions rendering at high resolutions.
 				<br><br>
 				&emsp;Point is, between copper and silly I had been thinking of making a model with a color palette for a texture but using bilinear filtering instead of nearest neighbour to make gradients. Silly was my first proper attempt at this, as I had tried it before but only in passing.
 			</p>
@@ -37,9 +45,10 @@
 				<br><br>
 				&emsp;For most of the model I only used 2 colors: one for the skin and another for details like ambient occlusion or extremities. Having simpler gradients like this sprinkled throughout helps with depth perception since I made the model with no shading in mind.
 			</p>
-			<div class=smol>
+			<div class="center smol">
 				<img src=ass/uv.webp width=512 height=512 style=width:16em>
 				<img src=ass/profile.webp>
+				<p>note the sleeves, shirt, fingers, face, hair, neck and knees</p>
 			</div>
 			<hr>
 			<h2>Random details</h2>
@@ -75,12 +84,16 @@
 				<img src=ass/sharps.webp>
 				<img src=ass/smooth.webp>
 			</div>
-			<img src=ass/sven.webp class=center style=width:32em>
+			<div class="center smol">
+				<img src=ass/sven.webp class=center style=width:32em>
+				<p>silly in a they hunger map in sven</p>
+			</div>
 			<hr>
-			<h2>TL;DR</h2>
+			<h2>Final thoughts</h2>
 			<p>
-				I made an upscaled palette as a texture and used bilinear filtering for gradients; ported the model to sven then gmod which was a long process.
-				<a href=https://steamcommunity.com/sharedfiles/filedetails/?id=3357778413>Link to the gmod addon</a>
+				So recap: I made an upscaled palette as a texture; used bilinear filtering for gradients; ported the model to sven then gmod which was a long process
+				<br><br>
+				Making simple models with flat colors that are unshaded can work (look at <a href=https://goose.game>untitled goose game</a> (though it has shadows which look gewd)) but depth perception becomes an issue. Gradients can make things clearer n more readable while still being a simple style without any lighting.
 			</p>
 		</div>
 	</div>
