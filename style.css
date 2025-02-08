@@ -37,6 +37,7 @@ body {
 	color: var(--scol);
 	font-family: Comfortaa, Verdana;
 	margin: 0;
+	animation: show 0.5s ease-out;
 }
 h1 {
 	background: var(--scol);
@@ -140,12 +141,18 @@ div.base {
 }
 div.content {
 	background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%);
-	padding: 12px;
+	padding: 0.5em;
 	border: solid var(--scol);
-	border-width: 9px 0;
+	border-width: 0.5em 0;
 	box-sizing: border-box;
 	overflow: hidden;
+	/*animation: open 0.5s ease-in;*/
 }
+/*@keyframes open {
+	0% {max-height: 0}
+	50% {max-height: 99em}
+	to {max-height: 100%}
+}*/
 .bordr {
 	border: 0.5em solid var(--scol);
 }
@@ -221,7 +228,7 @@ div.content {
 	flex-wrap: wrap;
 	justify-content: start;
 	gap: 0.5em 0.5em;
-	padding: 1em;
+	padding: 0.5em;
 }
 .showcase img {
 	outline: 0 double var(--accent);
