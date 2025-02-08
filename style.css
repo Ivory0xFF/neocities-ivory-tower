@@ -221,7 +221,6 @@ div.content {
 	width: round(nearest, attr(width length), 64px) !important;
 	height: round(nearest, attr(height length), 64px) !important;
 }
-
 /* portfolio stuff */
 .showcase {
 	display: flex;
@@ -266,25 +265,22 @@ div.content {
 	animation: show 0.5s;
 }
 #img0bg {
-	width: auto;
-	height: 100vh;
-	background: #35b09133;
-	border: solid var(--tcol);
-	border-width: 9px 0;
+	height: 100%;
 	animation: zoom 0.5s;
-	box-sizing: border-box;
 }
 #img0 {
 	height: 100%;
 	width: auto;
 	border-radius: 0;
-	object-fit: cover;
+	display: block;
 }
 #caption {
 	font-size: 1.5em;
 	color: var(--scol);
-	margin: 0.5em;
+	margin: 0;
 	text-shadow: var(--accent) 0 3px;
+	border-radius: 0 0 0.5em 0.5em;
+	animation: show 2s ease-in;
 }
 #caption a {
 	text-shadow: var(--scol) 0 3px;
@@ -386,7 +382,7 @@ div.card {
 /* mobile support */
 @media(orientation:portrait) {
 	.showcase > img, .viewport {flex: 100%}
-	div.base {width: 95vmin; margin: auto}
+	div.base {width: calc(100vmin - 1em); margin: auto}
 	#img0bg, div.content {width: 100%; height:auto}
 	#img0 {height: auto; width: 100%}
 	.tabl * {flex: 1 100%}
