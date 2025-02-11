@@ -217,23 +217,22 @@ div.content {
 	justify-content: space-around;
 	padding: 5px;
 }
-.pixelart {
-	width: round(nearest, attr(width length), 64px) !important;
-	height: round(nearest, attr(height length), 64px) !important;
+img.pixelart {
+	width: round(nearest, attr(width type(length)), 64px) !important;
+	height: round(nearest, attr(height type(length)), 64px) !important;
 }
 /* portfolio stuff */
 .showcase {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: start;
-	gap: 0.5em 0.5em;
+	justify-content: center;
+	gap: 0.5em;
 	padding: 0.5em;
 }
 .showcase img {
 	outline: 0 double var(--accent);
 	transition: .15s, opacity .5s;
 	object-fit: cover;
-	width: 20%;
 	box-sizing: border-box;
 }
 .showcase img:focus, .showcase img:hover {
@@ -251,7 +250,7 @@ div.content {
 	width: 100%;
 }
 .showcase img, .viewport {
-	flex: 1 0 24%;
+	flex: 0 0 24%;
 }
 #modal {
 	display: none;
@@ -286,7 +285,7 @@ div.content {
 	text-shadow: var(--scol) 0 3px;
 }
 @keyframes zoom {
-	0% {transform: scale(0.1)}
+	0% {transform: scale(0.6)}
 	to {transform: scale(1)}
 }
 @keyframes show {
@@ -383,7 +382,6 @@ div.card {
 @media(orientation:portrait) {
 	.showcase > img, .viewport {flex: 100%}
 	div.base {width: calc(100vmin - 1em); margin: auto}
-	#img0bg, div.content {width: 100%; height:auto}
-	#img0 {height: auto; width: 100%}
+	#img0bg, div.content, #img0 {width: 100%; height:auto}
 	.tabl * {flex: 1 100%}
 }
