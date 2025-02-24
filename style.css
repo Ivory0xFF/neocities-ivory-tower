@@ -37,6 +37,7 @@ body {
 	color: var(--scol);
 	font-family: Comfortaa, Verdana;
 	margin: 0;
+	animation: show 0.5s ease-out;
 }
 h1 {
 	background: var(--scol);
@@ -140,12 +141,18 @@ div.base {
 }
 div.content {
 	background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%);
-	padding: 12px;
+	padding: 0.5em;
 	border: solid var(--scol);
-	border-width: 9px 0;
+	border-width: 0.5em 0;
 	box-sizing: border-box;
 	overflow: hidden;
+	/*animation: open 0.5s ease-in;*/
 }
+/*@keyframes open {
+	0% {max-height: 0}
+	50% {max-height: 99em}
+	to {max-height: 100%}
+}*/
 .bordr {
 	border: 0.5em solid var(--scol);
 }
@@ -210,24 +217,22 @@ div.content {
 	justify-content: space-around;
 	padding: 5px;
 }
-.pixelart {
-	width: round(nearest, attr(width length), 64px) !important;
-	height: round(nearest, attr(height length), 64px) !important;
+img.pixelart {
+	width: round(nearest, attr(width type(length)), 64px) !important;
+	height: round(nearest, attr(height type(length)), 64px) !important;
 }
-
 /* portfolio stuff */
 .showcase {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: start;
-	gap: 0.5em 0.5em;
-	padding: 1em;
+	justify-content: center;
+	gap: 0.5em;
+	padding: 0.5em;
 }
 .showcase img {
 	outline: 0 double var(--accent);
 	transition: .15s, opacity .5s;
 	object-fit: cover;
-	width: 20%;
 	box-sizing: border-box;
 }
 .showcase img:focus, .showcase img:hover {
@@ -245,7 +250,7 @@ div.content {
 	width: 100%;
 }
 .showcase img, .viewport {
-	flex: 1 0 24%;
+	flex: 0 0 24%;
 }
 #modal {
 	display: none;
@@ -259,31 +264,28 @@ div.content {
 	animation: show 0.5s;
 }
 #img0bg {
-	width: auto;
-	height: 100vh;
-	background: #35b09133;
-	border: solid var(--tcol);
-	border-width: 9px 0;
+	height: 100%;
 	animation: zoom 0.5s;
-	box-sizing: border-box;
 }
 #img0 {
 	height: 100%;
 	width: auto;
 	border-radius: 0;
-	object-fit: cover;
+	display: block;
 }
 #caption {
 	font-size: 1.5em;
 	color: var(--scol);
-	margin: 0.5em;
+	margin: 0;
 	text-shadow: var(--accent) 0 3px;
+	border-radius: 0 0 0.5em 0.5em;
+	animation: show 2s ease-in;
 }
 #caption a {
 	text-shadow: var(--scol) 0 3px;
 }
 @keyframes zoom {
-	0% {transform: scale(0.1)}
+	0% {transform: scale(0.6)}
 	to {transform: scale(1)}
 }
 @keyframes show {
@@ -379,8 +381,7 @@ div.card {
 /* mobile support */
 @media(orientation:portrait) {
 	.showcase > img, .viewport {flex: 100%}
-	div.base {width: 95vmin; margin: auto}
-	#img0bg, div.content {width: 100%; height:auto}
-	#img0 {height: auto; width: 100%}
+	div.base {width: calc(100vmin - 1em); margin: auto}
+	#img0bg, div.content, #img0 {width: 100%; height:auto}
 	.tabl * {flex: 1 100%}
 }

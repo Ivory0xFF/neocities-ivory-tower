@@ -11,7 +11,6 @@
 	<title>Me site</title>
 	<link href=style.css rel=stylesheet>
 	<link href=fav.webp rel=icon>
-	<script src=fav.js></script>
 	<script type=importmap>
 		{
 			"imports":
@@ -23,9 +22,9 @@
 	</script>
 </head>
 <body>
-	<h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to my (very) professional website!</i></h1>
+	<h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to Venus!</i></h1>
 	<div class=base>
-		<h2 class=smol style="font-size:.7em;text-align:left;border-radius:9px 9px 0 0;display:flex;justify-content:center;margin-top:9%;background:var(--scol);color:var(--pcol)">
+		<h2 class=smol style="font-size:.7em;text-align:left;display:flex;justify-content:center;margin-top:5em;background:var(--scol);color:var(--pcol)">
 		<pre> =
 ..   -=-   ---   .--.    '.-'=   -=.   --
  =    '=.  -    =    =    =       '=. -'
@@ -87,22 +86,21 @@
 			renderer.setSize(window.innerWidth / 2, window.innerWidth / 2);
 			document.body.appendChild(renderer.domElement);
 			renderer.domElement.style.cssText = "z-index:-1;position:absolute;top:50%;width:100%";
-			let model
+			camera.position.z = 4;
+			let model;
 			gltfloader.load("/ass/Banan.gltf", function (gltf) {
 				model = gltf.scene
 				scene.add(model);
 				model.traverse((o) => {
 					if (o.isMesh) o.material = new THREE.MeshNormalMaterial({wireframe: true});
 				});
+				function render() {
+					model.rotation.y = Date.now() / 16000;
+					renderer.render(scene, camera);
+					requestAnimationFrame(render);
+				};
+				render();
 			})
-			camera.position.z = 4;
-			function render() {
-				requestAnimationFrame(render);
-				console.log(model)
-				model.rotation.y += .01 / 16;
-				renderer.render(scene, camera);
-			};
-			render();
 		</script>
 	</div>
 </body>
