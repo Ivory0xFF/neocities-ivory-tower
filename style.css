@@ -5,8 +5,8 @@
 :root {
 	--accent: #b71c4a;
 	--pcol: #35b091;
-	--scol: #033445;
-	--tcol: #35b09180;
+	--scol: #002b3ace;
+	--tcol: #0c354262;
 }
 /* dark theme */
 /*:root {
@@ -33,8 +33,8 @@
 ::-webkit-scrollbar-thumb:hover {background: var(--pcol)}
 ::selection {color: var(--pcol); background: var(--accent)}
 body {
-	background: #440020;
-	color: var(--scol);
+	background: #420924;
+	color: var(--pcol);
 	font-family: Comfortaa, Verdana;
 	margin: 0;
 	animation: show 0.5s ease-out;
@@ -45,11 +45,11 @@ h1 {
 	font-size: 2em;
 }
 h1, h2 {
-	padding: 0.5em;
+	padding: 0.25em;
 	font-family: 'MuseoModerno';
 }
 hr {
-	border: solid var(--scol);
+	border: solid var(--tcol);
 	padding: 2px;
 	border-width: 3px 8px;
 }
@@ -113,7 +113,7 @@ small {
 #img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.base, h1, hr, img, code, p {
 	border-radius: 0.5em;
 }
-#caption, .center, .color, .tag, h1, h2 {
+#caption, .center, .color, .tag, h1, h2, .tabl * {
 	text-align: center;
 }
 button, p {
@@ -138,10 +138,10 @@ div.base {
 	margin: 2em auto;
 	width: 70%;
 	position: relative;
-	background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%);
+	/* background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%); */
 	padding: 0.5em;
-	border: solid var(--scol);
-	border-width: 0.5em 0;
+	/* border: solid var(--scol);
+	border-width: 0.5em 0; */
 	box-sizing: border-box;
 	overflow: hidden;
 }
@@ -264,14 +264,14 @@ img.pixelart {
 }
 #caption {
 	font-size: 1.5em;
-	color: var(--scol);
+	color: var(--accent);
 	margin: 0;
-	text-shadow: var(--accent) 0 3px;
+	text-shadow: var(--pcol) 0 3px;
 	border-radius: 0 0 0.5em 0.5em;
-	animation: show 2s ease-in;
+	animation: show 1s ease-in;
 }
 #caption a {
-	text-shadow: var(--scol) 0 3px;
+	text-shadow: var(--pcol) 0 3px;
 }
 @keyframes zoom {
 	0% {transform: scale(0.6)}
@@ -320,20 +320,19 @@ img.pixelart {
 	flex-wrap: wrap;
 }
 .tabl * {
-	text-align: center;
 	flex: 1 30%;
 }
 .tabl b {
 	background: var(--tcol);
-	border-radius: 9px;
 	padding: 9px;
 	display: block;
-	border: solid var(--scol);
-	border-width: 0 0.25em;
+	border: solid var(--pcol);
+	border-width: 0.25em 0;
 }
 .tag {
 	display: inline-block;
 	background: #0ff3;
+	color: var(--pcol);
 	font-size: 1.25em;
 	padding: 0.25em 0.25em 0;
 	border-radius: 9px 9px 0 0;
@@ -357,11 +356,6 @@ div.card {
 .card p {
 	margin: 1em 0 0;
 }
-.card h2 {
-	text-align: left;
-	background: var(--tcol);
-	margin: 0;
-}
 .card img {
 	width: 8em;
 	height: auto;
@@ -371,6 +365,6 @@ div.card {
 @media(orientation:portrait) {
 	.showcase > img, .viewport {flex: 100%}
 	div.base {width: calc(100vmin - 1em); margin: auto}
-	#img0bg, div.content, #img0 {width: 100%; height:auto}
+	#img0bg, div.base, #img0 {width: 100%; height:auto}
 	.tabl * {flex: 1 100%}
 }
