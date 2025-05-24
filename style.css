@@ -174,11 +174,11 @@ div.content {
 	padding: 0.1rem;
 	transition: 0.05s;
 }
-.neon:hover/*, .neonw:hover*/ {
+.neon:hover {
 	text-shadow: 0 0 10px;
 	box-shadow: 0 0 20px;
 }
-.neon:active/*, .neonw:active*/ {
+.neon:active {
 	text-shadow: 0 0 9px;
 	box-shadow: 0 0 16px;
 }
@@ -187,9 +187,6 @@ div.content {
 	writing-mode: vertical-rl;
 	padding: 0.25em 0;
 }
-/*.neonw {
-	padding: 4px 8px;
-}*/
 .smol {
 	width: clamp(35ch, 95%, 60ch);
 }
