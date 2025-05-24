@@ -24,7 +24,7 @@
 <body>
 	<h1 style="padding:9px 0;margin:0;border-radius:0"><i>Welcome to Venus!</i></h1>
 	<div class=base>
-		<h2 class=smol style="font-size:.7em;text-align:left;display:flex;justify-content:center;margin-top:5em;background:var(--scol);color:var(--pcol)">
+		<h1 class=smol style="font-size:.7em;text-align:left;display:flex;justify-content:center;margin-top:5em">
 		<pre> =
 ..   -=-   ---   .--.    '.-'=   -=.   --
  =    '=.  -    =    =    =       '=. -'
@@ -36,12 +36,12 @@
  =     =    =  '=.-=-   -   =....=   =
  = .   =    =   '=.'=  -    =        =
  '-'    '--'     '=- -=      '--'   .=.</pre>
-		</h2>
+		</h1>
 		<div style=display:flex;align-items:flex-start>
 			<div class="content smol">
 				<div class=center style=width:75%>
 					<p style="writing-mode:sideways-lr;display:inline">I make STUFF</p>
-					<img src=ass/silly.webp width=256 height=256 class="bordr pixelart" style=width:16em;transform:rotate(2deg);display:inline-block>
+					<img src=ass/muma/render.webp width=256 height=256 class="bordr pixelart" style=width:16em;transform:rotate(2deg);display:inline-block>
 				</div>
 				<hr>
 				<div style="display:flex;gap:0 1.5em;align-items:end;justify-content:center">
@@ -75,33 +75,7 @@
 			<a class=neon href=http://hyprd.mn/user/55010>Hyprdmn</a>
 			<a class=neon href=index.xml style=font-size:1em>RSS</a>
 		</div>
-		<script type=module>
-			import * as THREE from "three";
-			import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
-			const gltfloader = new GLTFLoader();
-			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 99);
-			var renderer = new THREE.WebGLRenderer({alpha: true});
-			renderer.setClearColor(0xffffff, 0);
-			renderer.setSize(window.innerWidth / 2, window.innerWidth / 2);
-			document.body.appendChild(renderer.domElement);
-			renderer.domElement.style.cssText = "z-index:-1;position:absolute;top:50%;width:100%";
-			camera.position.z = 4;
-			let model;
-			gltfloader.load("/ass/Banan.gltf", function (gltf) {
-				model = gltf.scene
-				scene.add(model);
-				model.traverse((o) => {
-					if (o.isMesh) o.material = new THREE.MeshNormalMaterial({wireframe: true});
-				});
-				function render() {
-					model.rotation.y = Date.now() / 16000;
-					renderer.render(scene, camera);
-					requestAnimationFrame(render);
-				};
-				render();
-			})
-		</script>
+		<script type=module src=js/background.js></script>
 	</div>
 </body>
 </html>

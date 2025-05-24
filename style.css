@@ -54,7 +54,7 @@ hr {
 	border-width: 3px 8px;
 }
 p {
-	font-size: 1.2em;
+	font-size: 1.0em;
 	padding: 0.5em;
 	width: clamp(0, 1.25em, 75ch);
 }
