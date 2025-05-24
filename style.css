@@ -110,16 +110,16 @@ small {
 .pixelart, canvas {
 	image-rendering: pixelated;
 }
-#img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.content, h1, hr, img, code, p {
+#img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.base, h1, hr, img, code, p {
 	border-radius: 0.5em;
 }
 #caption, .center, .color, .tag, h1, h2 {
 	text-align: center;
 }
-.showcase, button, p {
+button, p {
 	background: var(--tcol);
 }
-.center, .img0, .modal, .smol {
+.center, .img0, .modal, .smol, .content {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -138,21 +138,13 @@ div.base {
 	margin: 2em auto;
 	width: 70%;
 	position: relative;
-}
-div.content {
 	background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%);
 	padding: 0.5em;
 	border: solid var(--scol);
 	border-width: 0.5em 0;
 	box-sizing: border-box;
 	overflow: hidden;
-	/*animation: open 0.5s ease-in;*/
 }
-/*@keyframes open {
-	0% {max-height: 0}
-	50% {max-height: 99em}
-	to {max-height: 100%}
-}*/
 .bordr {
 	border: 0.5em solid var(--scol);
 }
@@ -163,7 +155,7 @@ div.content {
 	font-size: 1.5em;
 	margin: 1em auto auto;
 }
-.neon/*, .neonw*/ {
+.neon {
 	color: var(--pcol);
 	font-size: 2em;
 	text-shadow: var(--pcol) 0 0 6px;
@@ -187,7 +179,7 @@ div.content {
 	writing-mode: vertical-rl;
 	padding: 0.25em 0;
 }
-.smol {
+.smol, .content {
 	width: clamp(35ch, 95%, 60ch);
 }
 /*.spoiler {
