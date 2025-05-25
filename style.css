@@ -33,7 +33,8 @@
 ::-webkit-scrollbar-thumb:hover {background: var(--pcol)}
 ::selection {color: var(--pcol); background: var(--accent)}
 body {
-	background: #420924;
+	background: url("/ass/muma/fuckedup.webp") center / cover fixed #420924;
+	background-blend-mode:darken;
 	color: var(--pcol);
 	font-family: Comfortaa, Verdana;
 	margin: 0;
@@ -180,7 +181,7 @@ div.base {
 	padding: 0.25em 0;
 }
 .smol, .content {
-	width: clamp(35ch, 95%, 60ch);
+	width: clamp(35ch, 95%, 70ch);
 }
 /*.spoiler {
 	background: var(--scol);
