@@ -1,5 +1,5 @@
 /* custom fonts */
-@import url( 'https://fonts.googleapis.com/css2?family=Comfortaa&family=MuseoModerno&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=MuseoModerno&family=Source+Code+Pro&display=swap");
 
 /* general styling */
 :root {
@@ -47,7 +47,7 @@ h1 {
 }
 h1, h2 {
 	padding: 0.25em;
-	font-family: 'MuseoModerno';
+	font-family: "MuseoModerno";
 }
 hr {
 	border: solid var(--tcol);
@@ -86,7 +86,7 @@ button:active {
 	border-width: 6px 0 0;
 }
 pre {
-	font: 1.5em AndaleMono, monospace;
+	font: 1.5em monospace;
 }
 input[type=range] {
 	accent-color: var(--accent);
