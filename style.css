@@ -301,7 +301,7 @@ img.pixelart {
 	border: 0 solid;
 	box-sizing: border-box;
 	transition: 0.1s;
-	background: var(--pcol);
+	background: var(--scol);
 }
 .color:focus, .color:hover {
 	border-width: 0.25em 0;
