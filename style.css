@@ -48,6 +48,7 @@ h1 {
 h1, h2 {
 	padding: 0.25em;
 	font-family: "MuseoModerno";
+	mix-blend-mode: difference;
 }
 hr {
 	border: solid var(--tcol);
@@ -136,11 +137,11 @@ button, p {
 
 /* general classes */
 div.base {
-	margin: 2em auto;
+	margin: 0 auto;
 	width: 70%;
 	position: relative;
 	/* background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%); */
-	padding: 0.5em;
+	padding: 0;
 	/* border: solid var(--scol);
 	border-width: 0.5em 0; */
 	box-sizing: border-box;
@@ -203,7 +204,7 @@ div.base {
 .flex {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1em 1em;
+	gap: 0.5em;
 	justify-content: space-around;
 	padding: 5px;
 }
@@ -240,7 +241,7 @@ img.pixelart {
 	width: 100%;
 }
 .showcase img, .viewport {
-	flex: 0 0 24%;
+	flex: 0 0 16em;
 }
 #modal {
 	display: none;
@@ -365,7 +366,6 @@ div.card {
 /* mobile support */
 @media(orientation:portrait) {
 	.showcase > img, .viewport {flex: 100%}
-	div.base {width: calc(100vmin - 1em); margin: auto}
 	#img0bg, div.base, #img0 {width: 100%; height:auto}
 	.tabl * {flex: 1 100%}
 }
