@@ -12,7 +12,7 @@ camera.position.z = 3;
 camera.position.y = .8;
 let model;
 gltfloader.load("/ass/muma/muma.glb", function (gltf) {
-    model = gltf.scene
+    model = gltf.scene;
     scene.add(model);
     function render() {
         model.rotation.y = Date.now() / 32000;
