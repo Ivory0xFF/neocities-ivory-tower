@@ -1,3 +1,3 @@
 .vscode/
-boids/target/
+*/target/*
 *.min.*
