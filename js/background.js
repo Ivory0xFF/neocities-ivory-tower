@@ -18,10 +18,12 @@ gltfloader.load("/ass/muma/muma.glb", function (gltf) {
     mixer.clipAction(THREE.AnimationClip.findByName(gltf.animations, "idle")).play();
 
     scene.add(model);
+
+    let clock = new THREE.Clock();
     function render() {
         model.rotation.y = Date.now() / 32000;
         renderer.render(scene, camera);
-        mixer.update(Date.now());
+        mixer.update(clock.getDelta()*0.66);
         requestAnimationFrame(render);
     };
     render();
