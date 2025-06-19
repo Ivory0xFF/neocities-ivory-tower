@@ -33,8 +33,8 @@
 ::-webkit-scrollbar-thumb:hover {background: var(--pcol)}
 ::selection {color: var(--pcol); background: var(--accent)}
 body {
-	background: url("/ass/muma/fuckedup.webp") center / cover fixed #420924;
-	background-blend-mode:darken;
+	background: url("/ass/bg/fuckedup.webp") center / cover fixed, url("/ass/bg/waw.webp") repeat center / 200% fixed, #420924;
+	background-blend-mode: darken;
 	color: var(--pcol);
 	font-family: Comfortaa, Verdana;
 	margin: 0;
