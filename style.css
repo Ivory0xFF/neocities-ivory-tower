@@ -25,7 +25,7 @@
 * {
 	scrollbar-color: var(--accent)#0000;
 	scroll-behavior: smooth;
-	scrollbar-width: none;
+	scrollbar-width: thin;
 }
 ::-webkit-scrollbar {background: #0000}
 ::-webkit-scrollbar-track {background: #0000}
