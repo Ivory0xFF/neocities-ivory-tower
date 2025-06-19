@@ -59,6 +59,7 @@ p {
 	font-size: 1.0em;
 	padding: 0.5em;
 	width: clamp(0, 1.25em, 75ch);
+	text-align: justify;
 }
 img {
 	width: clamp(1em, 16em, 100%);
