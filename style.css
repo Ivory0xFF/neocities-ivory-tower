@@ -185,6 +185,22 @@ div.base {
 .smol, .content {
 	width: clamp(35ch, 95%, 70ch);
 }
+.spoiler {
+	background: var(--scol);
+}
+.spoiler img {
+	opacity: 0;
+}
+.spoiler::before {
+	content: url("ass/eye.svg") "lmao";
+	text-align: center;
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	pointer-events: none;
+}
 /*.spoiler {
 	background: var(--scol);
 	transition: 0.4s;
@@ -241,7 +257,7 @@ img.pixelart {
 .viewport canvas {
 	width: 100%;
 }
-.showcase img, .viewport {
+.showcase img, .viewport, .spoiler {
 	flex: 0 0 16em;
 }
 #modal {
