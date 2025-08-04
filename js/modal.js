@@ -12,7 +12,7 @@ for (var i = 0; i < imgs.length; i++) {
 		caption.innerHTML = c.alt;
 		modal.style.animation = "";
 		modal.style.display = "flex";
-		location.hash = c.id;
+		location.replace(location.href.split("#")[0] + "#" + c.id);
 		(c.closest(".showcase").classList.contains("pixelart")) || c.classList.contains("pixelart") ? img.className = "pixelart" : img.className = ""; 
 	};
 	if ("#" + c.id == window.location.hash) {
@@ -57,4 +57,5 @@ modal.addEventListener("animationend", evt => {
 
 function h() { // Hide
 	modal.style.animation = "hide .2s forwards";
+	history.replaceState({}, {}, location.href.split("#")[0]);
 }
