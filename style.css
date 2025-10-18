@@ -48,7 +48,7 @@ h1 {
 h1, h2 {
 	padding: 0.25em;
 	font-family: "MuseoModerno";
-	mix-blend-mode: screen;
+	mix-blend-mode: difference;
 }
 hr {
 	border: solid var(--tcol);
@@ -95,7 +95,7 @@ input[type=range] {
 	cursor: pointer;
 }
 code {
-	font-family: Consolas;
+	font-family: monospace;
 	padding: 0 6px;
 	color: var(--pcol);
 	background: var(--scol);
@@ -109,7 +109,7 @@ small {
 	font-size: 1em;
 }
 
-/* section dedicated to elements and classes with the same rules (grouping them together saves up space MOST of the time) */
+/* elements and classes with the same rules (grouping them together saves up space MOST of the time) */
 .pixelart, canvas {
 	image-rendering: pixelated;
 }
@@ -141,10 +141,7 @@ div.base {
 	margin: 0 auto;
 	width: 70%;
 	position: relative;
-	/* background: linear-gradient(90deg, var(--tcol) -50%, var(--pcol) 150%); */
 	padding: 0;
-	/* border: solid var(--scol);
-	border-width: 0.5em 0; */
 	box-sizing: border-box;
 	overflow: hidden;
 }
