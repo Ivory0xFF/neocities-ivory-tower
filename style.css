@@ -381,5 +381,6 @@ div.card {
 @media(orientation:portrait) {
 	.showcase > img, .viewport {flex: 100%}
 	#img0bg, div.base, #img0 {width: 100%; height:auto}
+	#img0bg {margin:auto 0} 
 	.tabl * {flex: 1 100%}
 }
