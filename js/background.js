@@ -38,7 +38,7 @@ gltfloader.load("/ass/muma/muma.glb", function (gltf) {
 				camera.position.y = 0.5 + scroll * 0.9;
 				lastScroll = scroll;
         renderer.render(scene, camera);
-        mixer.update(clock.getDelta() * 0.66);
+        mixer.update(clock.getDelta() * 15);
         requestAnimationFrame(render);
     };
     render();
