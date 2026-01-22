@@ -44,11 +44,10 @@ h1 {
 	background: var(--scol);
 	color: var(--pcol);
 	font-size: 2em;
+	margin: 1.5rem 0;
 }
-h1, h2 {
-	padding: 0.25em;
-	font-family: "MuseoModerno";
-	mix-blend-mode: difference;
+h2 {
+	margin: 1rem 0;
 }
 hr {
 	border: solid var(--tcol);
@@ -56,8 +55,8 @@ hr {
 	border-width: 3px 8px;
 }
 p {
-	font-size: 1.0em;
 	text-align: justify;
+	padding: 0.25rem;
 }
 img {
 	width: clamp(1em, 16em, 100%);
@@ -70,23 +69,9 @@ a {
 a:focus-visible, a:hover {
 	text-decoration-style: solid;
 }
-button {
-	box-sizing: border-box;
-	border: solid var(--scol);
-	border-width: 0 0 6px;
-	color: var(--scol);
-	display: block;
-	transition: 0.05s;
-	font-size: 1.25em;
-}
-button:focus, button:hover {
-	border-width: 2px 0 4px;
-}
-button:active {
-	border-width: 6px 0 0;
-}
 pre {
 	font: 1.5em monospace;
+	margin: 1rem 0;
 }
 input[type=range] {
 	accent-color: var(--accent);
@@ -99,21 +84,18 @@ code {
 	background: var(--scol);
 }
 a:focus-visible {
-	outline-offset: 4px;
-}
-small {
-	font-size: 1em;
+	outline-offset: 0.25rem;
 }
 
 /* elements and classes with the same rules (grouping them together saves up space MOST of the time) */
 .pixelart, canvas {
 	image-rendering: pixelated;
 }
-#img0bg, .card h2, .neon, .neonu, .palette, .showcase, .showcase canvas, .spoiler, .tabl, a, button, div.card, div.base, h1, hr, img, code, p {
-	border-radius: 0.5em;
+#img0bg, .card h2, .palette, .showcase, .showcase canvas, .spoiler, .tabl, button, div.card, div.base, h1, hr, img, code, p {
+	border-radius: 0.5rem;
 }
-p, .showcase, .tabl, .tabl b {
-	padding: 0.5em;
+p, .showcase, .tabl, .tabl b, h1, h2 {
+	padding: 0.5rem;
 }
 #caption, .center, .color, .tag, h1, h2, .tabl * {
 	text-align: center;
@@ -122,25 +104,28 @@ button, p {
 	background: var(--tcol);
 }
 .center, .img0, .modal, .smol, .content {
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
-#close, .color, .spoiler {
+#close, .color {
 	cursor: pointer;
 }
-#img0, .spoiler, button {
+#img0, .spoiler {
 	user-select: none;
 }
 .spoiler:focus-visible, a:focus-visible, button:focus-visible {
-	outline: var(--accent) solid 4px;
+	outline: var(--accent) solid 0.125rem;
+}
+h1, h2 {
+	font-family: "MuseoModerno";
+	mix-blend-mode: difference;
 }
 
 /* general classes */
 div.base {
 	margin: 0 auto;
 	width: 75%;
-	position: relative;
-	padding: 0;
-	box-sizing: border-box;
+	padding: 2rem 0;
 	overflow: hidden;
 }
 .bordr {
@@ -164,7 +149,8 @@ div.base {
 	transition: 0.05s;
 	text-orientation: upright;
 	writing-mode: vertical-rl;
-	padding: 0.25em 0;
+	padding: 0.5rem 0;
+	border-radius: 1rem;
 }
 .neon:hover {
 	text-shadow: 0 0 10px;
@@ -361,7 +347,7 @@ div.card {
 	margin: 1em 0 0;
 }
 .card p {
-	margin: 1em 0 0;
+	margin: 0.5em 0;
 }
 .card img {
 	width: 8em;
