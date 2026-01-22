@@ -4,45 +4,44 @@
 /* general styling */
 :root {
 	--accent: #b71c4a;
-	--pcol: #35b091;
-	--scol: #002b3ace;
-	--tcol: #0c354262;
+	--pri: #35b091;
+	--sec: #002b3ace;
+	--ter: #0c354262;
 }
 /* dark theme */
 /*:root {
 	--accent: #802;
-	--pcol: #625;
-	--scol: #202;
-	--tcol: #b692;
+	--pri: #625;
+	--sec: #202;
+	--ter: #b692;
 }*/
 /*
 :root {
 	--accent: #c44;
-	--pcol: #646;  548
-	--scol: #002;
-	--tcol: #8791; ecf2
+	--pri: #646;  548
+	--sec: #002;
+	--ter: #8791; ecf2
 }*/
 * {
 	scrollbar-color: var(--accent) #0000;
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
 }
-::-webkit-scrollbar {background: #0000}
-::-webkit-scrollbar-track {background: #0000}
-::-webkit-scrollbar-thumb {background: var(--tcol)}
-::-webkit-scrollbar-thumb:hover {background: var(--pcol)}
-::selection {color: var(--pcol); background: var(--accent)}
+::-webkit-scrollbar, ::-webkit-scrollbar-track {background: #0000}
+::-webkit-scrollbar-thumb {background: var(--ter)}
+::-webkit-scrollbar-thumb:hover {background: var(--pri)}
+::selection {color: var(--pri); background: var(--accent)}
 body {
 	background: url("/ass/bg/arches.webp") top / cover fixed, url("/ass/bg/waw.webp") repeat center / 200% fixed #420924;
 	background-blend-mode: difference, darken;
-	color: var(--pcol);
+	color: var(--pri);
 	font-family: Comfortaa, Verdana;
 	margin: 0;
 	animation: show 0.5s ease-out;
 }
 h1 {
-	background: var(--scol);
-	color: var(--pcol);
+	background: var(--sec);
+	color: var(--pri);
 	font-size: 2em;
 	margin: 1.5rem 0;
 }
@@ -50,7 +49,7 @@ h2 {
 	margin: 1rem 0;
 }
 hr {
-	border: solid var(--tcol);
+	border: solid var(--ter);
 	padding: 2px;
 	border-width: 3px 8px;
 }
@@ -80,8 +79,8 @@ input[type=range] {
 code {
 	font-family: monospace;
 	padding: 0 6px;
-	color: var(--pcol);
-	background: var(--scol);
+	color: var(--pri);
+	background: var(--sec);
 }
 a:focus-visible {
 	outline-offset: 0.25rem;
@@ -91,17 +90,17 @@ a:focus-visible {
 .pixelart, canvas {
 	image-rendering: pixelated;
 }
-#img0bg, .card h2, .palette, .showcase, .showcase canvas, .spoiler, .tabl, button, div.card, div.base, h1, hr, img, code, p {
+#img0bg, .card h2, .palette, .showcase, .showcase canvas, .spoiler, .tabl, h1, hr, img, code, p {
 	border-radius: 0.5rem;
 }
-p, .showcase, .tabl, .tabl b, h1, h2 {
+p, .tabl, .tabl b, h1, h2 {
 	padding: 0.5rem;
 }
 #caption, .center, .color, .tag, h1, h2, .tabl * {
 	text-align: center;
 }
 button, p {
-	background: var(--tcol);
+	background: var(--ter);
 }
 .center, .img0, .modal, .smol, .content {
 	margin-left: auto;
@@ -129,22 +128,18 @@ div.base {
 	overflow: hidden;
 }
 .bordr {
-	border: 0.5em solid var(--scol);
+	border: 0.5em solid var(--sec);
 }
 .center {
 	display: block;
 }
-.back {
-	font-size: 1.5em;
-	margin: 1em auto auto;
-}
 .neon {
-	color: var(--pcol);
+	color: var(--pri);
 	font-size: 2em;
-	text-shadow: var(--pcol) 0 0 6px;
-	box-shadow: var(--pcol) 0 0 8px;
-	background: var(--scol);
-	border: var(--pcol) 0.15rem solid;
+	text-shadow: var(--pri) 0 0 6px;
+	box-shadow: var(--pri) 0 0 8px;
+	background: var(--sec);
+	border: var(--pri) 0.15rem solid;
 	text-decoration: none;
 	transition: 0.05s;
 	text-orientation: upright;
@@ -164,7 +159,7 @@ div.base {
 	width: clamp(35ch, 95%, 70ch);
 }
 .spoiler {
-	background: var(--scol);
+	background: var(--sec);
 }
 .spoiler img {
 	opacity: 0;
@@ -180,10 +175,10 @@ div.base {
 	pointer-events: none;
 }
 /*.spoiler {
-	background: var(--scol);
+	background: var(--sec);
 	transition: 0.4s;
 	display: inline;
-	background: var((--scol));
+	background: var((--sec));
 }
 .spoiler * {
 	opacity: 0;
@@ -211,7 +206,7 @@ img.pixelart {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 0.5em;
+	gap: 0.5rem;
 }
 .showcase img {
 	outline: 0 double var(--accent);
@@ -220,11 +215,11 @@ img.pixelart {
 	box-sizing: border-box;
 }
 .showcase img:focus, .showcase img:hover {
-	outline: 0.5em solid var(--accent);
+	outline: 0.5rem solid var(--accent);
 	cursor: pointer;
 }
 .showcase img:active {
-	outline-offset: 0.5em;
+	outline-offset: 0.5rem;
 }
 .viewport {
 	height: auto;
@@ -234,7 +229,7 @@ img.pixelart {
 	width: 100%;
 }
 .showcase img, .viewport, .spoiler {
-	flex: 0 0 16em;
+	flex: 0 0 calc(50% - 0.5rem);
 }
 #modal {
 	display: none;
@@ -261,12 +256,12 @@ img.pixelart {
 	font-size: 1.5em;
 	color: var(--accent);
 	margin: 0;
-	text-shadow: var(--pcol) 0 3px;
+	text-shadow: var(--pri) 0 3px;
 	border-radius: 0 0 0.5em 0.5em;
 	animation: show 1s ease-in;
 }
 #caption a {
-	text-shadow: var(--pcol) 0 3px;
+	text-shadow: var(--pri) 0 3px;
 }
 @keyframes zoom {
 	0% {transform: scale(0.6)}
@@ -295,7 +290,7 @@ img.pixelart {
 	border: 0 solid;
 	box-sizing: border-box;
 	transition: 0.1s;
-	background: var(--scol);
+	background: var(--sec);
 }
 .color:focus, .color:hover {
 	border-width: 0.25em 0;
@@ -307,7 +302,7 @@ img.pixelart {
 	outline: 0;
 }
 .tabl {
-	background: var(--tcol);
+	background: var(--ter);
 	display: flex;
 	justify-content: space-evenly;
 	align-content: space-between;
@@ -317,15 +312,15 @@ img.pixelart {
 	flex: 1 30%;
 }
 .tabl b {
-	background: var(--tcol);
+	background: var(--ter);
 	display: block;
-	border: solid var(--pcol);
+	border: solid var(--pri);
 	border-width: 0.25em 0;
 }
 .tag {
 	display: inline-block;
-	background: var(--scol);
-	color: var(--pcol);
+	background: var(--sec);
+	color: var(--pri);
 	font-size: 1.25em;
 	padding: 0.25em 0.25em 0;
 	border-radius: 0.5em 0.5em 0 0;
@@ -342,7 +337,7 @@ img.pixelart {
 
 /* blog stuff */
 div.card {
-	background: var(--tcol);
+	background: var(--ter);
 	padding: 0.5rem;
 	margin: 1em 0 0;
 }
