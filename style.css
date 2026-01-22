@@ -64,6 +64,7 @@ img {
 a {
 	color: var(--accent);
 	text-decoration-style: dashed;
+	outline: #0000 double;
 }
 a:focus-visible, a:hover {
 	text-decoration-style: solid;
@@ -112,14 +113,17 @@ button, p {
 #img0, .spoiler {
 	user-select: none;
 }
-.spoiler:focus-visible, a:focus-visible, button:focus-visible {
-	outline: var(--accent) solid 0.125rem;
+.spoiler:focus-visible, a:focus-visible {
+	outline: var(--accent) solid 0.25rem;
+	transition: 0s;
 }
 h1, h2 {
 	font-family: "MuseoModerno";
 	mix-blend-mode: difference;
 }
-
+a, .neon {
+	transition: 0.25s;
+}
 /* general classes */
 div.base {
 	margin: 0 auto;
@@ -141,7 +145,6 @@ div.base {
 	background: var(--sec);
 	border: var(--pri) 0.15rem solid;
 	text-decoration: none;
-	transition: 0.05s;
 	text-orientation: upright;
 	writing-mode: vertical-rl;
 	padding: 0.5rem 0;
@@ -150,6 +153,7 @@ div.base {
 .neon:hover {
 	text-shadow: 0 0 10px;
 	box-shadow: 0 0 20px;
+	transition: 0s;
 }
 .neon:active {
 	text-shadow: 0 0 9px;
