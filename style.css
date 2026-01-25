@@ -91,7 +91,7 @@ a:focus-visible {
 .pixelart, canvas {
 	image-rendering: pixelated;
 }
-#img0bg, .card h2, .palette, .showcase, .showcase canvas, .spoiler, .tabl, h1, hr, img, code, p {
+#img0bg, .card h2, .palette, .showcase, .showcase canvas, .nude, .tabl, h1, hr, img, code, p {
 	border-radius: 0.5rem;
 }
 p, .tabl, .tabl b, h1, h2 {
@@ -110,10 +110,10 @@ button, p {
 #close, .color {
 	cursor: pointer;
 }
-#img0, .spoiler {
+#img0 {
 	user-select: none;
 }
-.spoiler:focus-visible, a:focus-visible {
+.nude:focus-visible, a:focus-visible {
 	outline: var(--accent) solid 0.25rem;
 	transition: 0s;
 }
@@ -121,9 +121,10 @@ h1, h2 {
 	font-family: "MuseoModerno";
 	mix-blend-mode: difference;
 }
-a, .neon {
+a, .neon, .nude {
 	transition: 0.25s;
 }
+
 /* general classes */
 div.base {
 	margin: 0 auto;
@@ -162,39 +163,35 @@ div.base {
 .smol, .content {
 	width: clamp(35ch, 95%, 70ch);
 }
-.spoiler {
+.nude {
 	background: var(--sec);
 }
-.spoiler img {
+.nude img {
 	opacity: 0;
-}
-.spoiler::before {
-	content: url("ass/eye.svg") "lmao";
-	text-align: center;
-	font-size: 2em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	height: 100%;
+	width: 100%;
+}
+.nude::after {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	content: "Nude";
+	top: -50%;
 	pointer-events: none;
 }
-/*.spoiler {
-	background: var(--sec);
-	transition: 0.4s;
-	display: inline;
-	background: var((--sec));
+.nude:hover {
+	transition: 0s;
+	background: #0000;
 }
-.spoiler * {
-	opacity: 0;
-	transition: 0.2s;
-}
-.spoiler:focus *, .spoiler:hover * {
+.nude:hover img {
+	transition: 0s;
 	opacity: 1;
 }
-.spoiler:focus, .spoiler:hover {
-	background: #0000;
-}*/
-/* .showcase .spoiler:has(img){} */
+.nude:hover::after {
+	transition: 0s;
+	opacity: 0;
+}
 .flex {
 	display: flex;
 	flex-wrap: wrap;
@@ -205,6 +202,7 @@ img.pixelart {
 	width: round(nearest, attr(width px), 64px) !important;
 	height: round(nearest, attr(height px), 64px) !important;
 }
+
 /* portfolio stuff */
 .showcase {
 	display: flex;
@@ -221,6 +219,7 @@ img.pixelart {
 .showcase img:focus, .showcase img:hover {
 	outline: 0.5rem solid var(--accent);
 	cursor: pointer;
+	transition: 0s;
 }
 .showcase img:active {
 	outline-offset: 0.5rem;
@@ -232,8 +231,8 @@ img.pixelart {
 .viewport canvas {
 	width: 100%;
 }
-.showcase img, .viewport, .spoiler {
-	flex: 0 0 calc(50% - 0.5rem);
+.showcase img, .viewport, .nude {
+	flex: 0 0 calc(50% - 0.25rem);
 }
 #modal {
 	display: none;
